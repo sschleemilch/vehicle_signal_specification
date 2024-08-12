@@ -10,7 +10,7 @@ It is expected, that any value not mentioned in the array is considered an error
 The datatype of the array elements is the `datatype` defined for the data entry itself.
 For `attributes` it is possible to optionally set a default value.
 
-```YAML
+```yaml
 SteeringWheel.Position:
   datatype: string
   type: attribute
@@ -46,7 +46,7 @@ The actual value of the signal is expected to contain a subset of the values spe
 
 Example:
 
-```YAML
+```yaml
 DogBreeds:
   datatype: string[]
   type: attribute

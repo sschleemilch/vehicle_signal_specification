@@ -37,7 +37,7 @@ definition*, wherein it's specified. By default the size of the array is undefin
 By the optional keyword `arraysize` the size of the array can be specified.
 The following syntax shall be used to declare an array:
 
-```YAML
+```yaml
 # Array of datatype uint32, by default size of the array is undefined
 datatype: uint32[]
 # Optional: specified number of elements in the array
@@ -62,7 +62,7 @@ corresponding data stream.
 A camera can be a good example of it. The Data Entry for the camera
 and the corresponding video stream could look like:
 
-```YAML
+```yaml
 Camera:
   type: branch
   description: Information about the camera and how to connect to the video stream

@@ -18,7 +18,7 @@ or else it should be defined as a sensor instead.
 
 Below is an example of a complete attribute describing engine power
 
-```YAML
+```yaml
 MaxPower:
   datatype: uint16
   type: attribute
@@ -31,19 +31,19 @@ It is possible to give default values also for arrays. In this case square brack
 
 Example 1: Empty Array
 
-```YAML
+```yaml
   default: []
 ```
 
 Example 2: Array with 3 elements, first element has value 1, second element value 2, third element value 0
 
-```YAML
+```yaml
   default: [1, 2, 0]
 ```
 
 Full example, array with two elements, first with value2, second with value 3:
 
-```YAML
+```yaml
 SeatPosCount:
   datatype: uint8[]
   type: attribute

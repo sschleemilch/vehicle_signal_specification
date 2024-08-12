@@ -11,7 +11,7 @@ Actuators are used to control the desired value of a property. Some properties i
 A data entry for a sensor or actuator defines its members. A data
 entry example is given below:
 
-```YAML
+```yaml
 Speed:
   type: sensor
   description: The vehicle speed.

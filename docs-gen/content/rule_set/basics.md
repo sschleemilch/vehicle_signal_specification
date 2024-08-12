@@ -96,7 +96,7 @@ if the meta-data of the moved node hasn't changed.
 * Nodes which are deprecated will be removed from the specification, either in the second minor update or, if earlier, the next major update.
 
 ### Example
-```YAML
+```yaml
 Vehicle.Navigation.CurrentLocation:
   type: branch
   description: The current latitude and longitude of the vehicle.

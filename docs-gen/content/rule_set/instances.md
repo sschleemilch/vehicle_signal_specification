@@ -55,7 +55,7 @@ example for details.
 
 The example from above in the specification:
 
-```YAML
+```yaml
 # Cabin.vspec
 Door:
   type: branch
@@ -73,7 +73,7 @@ Door.SomeSignal:
 ```
 
 
-```yml
+```yaml
 # SingleDoor.vspec
 
 #
@@ -103,7 +103,7 @@ instance definitions, then the last found definition will be used.
 As an example, if three row of doors are needed, then the default VSS instance definition
 can be overridden by redefining the Door branch as shown in the example below.
 
-```YAML
+```yaml
 #Redefinition changing number of rows from 2 to 3
 #The redefinition must appear "after" the original definition
 Vehicle.Cabin.Door:
@@ -126,7 +126,7 @@ and that offers heating for both windshields. But that is not the case for all v
 it is not even certain that all vehicles have two windshields. This sections gives recommendations on how
 to use VSS for a vehicle if the VSS specification does not offer an exact match of the capabilities of the vehicle.
 
-```YAML
+```yaml
 Windshield:
   type: branch
   instances: ["Front", "Rear"]
@@ -159,7 +159,7 @@ of the following methods are recommended:
 - Redefine the branch. If a vehicle for example does not have a rear windshield
 then append a redefinition at the end of the VSS:
 
-```YAML
+```yaml
 Vehicle.Body.Windshield:
   type: branch
   instances: ["Front"]

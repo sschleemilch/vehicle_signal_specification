@@ -9,7 +9,7 @@ weight: 20
 It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units.
 For most signals in the VSS standard catalog, a data unit has been selected. A typical example is `Vehicle.Speed`, as shown below.
 
-```
+```yaml
 Vehicle.Speed:
   datatype: float
   type: sensor
@@ -26,6 +26,7 @@ as `km/h` (with float as datatype). A user interface or API may show or request 
 and a transport protocol may send speed in another unit, possibly also involving scaling and offset.
 But in protocols not explicitly specifying data units (like [VISS](https://raw.githack.com/w3c/automotive/gh-pages/spec/VISSv2_Core.html))
 it is expected that `Vehicle.Speed` is sent and received as `km/h` (without scaling or offset).
+However since units define possible `allowed-datatypes` the given `datatype` has to match the allowed ones.
 
 VSS does not offer any syntax for defining alternative units for a specific signal.
 The VSS project has specified for all units a corresponding quantity e.g. `velocity` for `km/h`.
@@ -36,7 +37,7 @@ the quantity `velocity`, it is not specified how they relate to each other.
 In some cases it is natural to omit the data unit. This concerns typically signals where datatype `string` is used,
 but also signals where the value just represents a number (dimensionless quantities), like in the example below:
 
-```
+```yaml
 Vehicle.Cabin.DoorCount:
   datatype: uint8
   type: attribute
@@ -51,7 +52,7 @@ In some cases, the definition on how to calculate the signal value is obvious, l
 below. It is likely that all VSS users will calculate fuel level in the same way, i.e. the meaning of a fuel level of 50%
 is well agreed, the liters of fuel in the tank is exactly 50% of nominal capacity.
 
-```
+```yaml
 Vehicle.Powertrain.FuelSystem.Level:
   datatype: uint8
   type: sensor
@@ -69,7 +70,7 @@ Some vehicles might monitor actual wear, others might estimate it based on vehic
 This is in VSS called a logical range, a VSS user knows what range to use but are free to define the formula for calculating the value.
 Values from different vehicles (of different make/model) can not always be compared, as the formula used for calculation may differ.
 
-```
+```yaml
 Vehicle.Powertrain.Transmission.ClutchWear:
   datatype: uint8
   type: sensor
@@ -81,8 +82,8 @@ Vehicle.Powertrain.Transmission.ClutchWear:
 ## Supported Data Units in VSS Standard Catalog
 
 The VSS syntax does not in itself specify what units can be used, the unit attribute as declared for signals in *.vspec files is optional and can contain an arbitrary string value.
-[VSS-Tools](https://github.com/COVESA/vss-tools) however require that all units used are defined,
-and at is also a requirement for signals in the VSS standard catalog.
+[VSS-Tools](https://github.com/COVESA/vss-tools) however require that all units used are defined
+and therefore is also a requirement for signals in the VSS standard catalog.
 Units are defined by including them in a unit file with syntax as described below.
 One or more unit files can be specified by the `-u` parameter and, if not given, the tools search for a file `units.yaml`
 in the same directory as the root *.vspec file.
@@ -129,7 +130,7 @@ using different units but defined with the same quantity.
 
 Example:
 
-```
+```yaml
 m:
   definition: Length measured in meters
   unit: meter
@@ -158,8 +159,7 @@ The `deprecation` keyword can be used to indicate that a specific unit may be re
 Tooling shall preferably give a warning if a signal uses a deprecated unit or the unit used belongs to a deprecated quantity.
 The reason should preferably list when and why the unit is deprecated, a hypothetical example is given below:
 
-```
-
+```yaml
   inch:
     definition: Distance measured in inches
     unit: inch
@@ -171,29 +171,14 @@ The reason should preferably list when and why the unit is deprecated, a hypothe
     quantity: distance
 ```
 
-
-The unit syntax has recently been changed. To simplify transition to the new syntax it is recommended that
-tooling also supports unit files using the old syntax described below.
-
-```
-units:
-  [
-    <vss-unit-identifier>: # Typically unit abbreviation, like km/h or mm, but
-      label: <string> # Replaced with "unit"
-      description: <string> # Replaced with "definition"
-      quantity: <string>
-  ]*
-```
-
 ## Quantity file syntax
 
-Defining quantities is recommended, but currently optional for backward compatibility reasons.
+Defining of quantities is required.
 If tooling supports quantity files it can verify that all units provided in unit files
 use defined quantities.
 For the VSS standard catalog it is required that matching quantities have been defined for all units.
 
 ```
-
   [
     <vss-quantity-identifier>: # Identifier preferably taken from a standard, like ISO 80000
       definition: <string>
@@ -226,9 +211,7 @@ As this unit is not commonly used and not described in any standards, it might b
 That is however only informative, as it a custom unit a downstream implementation supporting unit conversion may not support automatic conversion
 of furlong to other units.
 
-
-
-```
+```yaml
 units:
   furlong:
     definition: Length measured in furlong, 1 furlong equals 201.1680 m

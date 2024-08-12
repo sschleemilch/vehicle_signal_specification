@@ -6,7 +6,7 @@ weight: 6
 
 An include directive in a vspec file will read the file it refers to and the
 contents of that file will be inserted into the current buffer in place of the
-include directive.  The included file will, in its turn, be scanned for
+include directive. The included file will, in its turn, be scanned for
 include directives to be replaced, effectively forming a tree of included
 files.
 
@@ -21,6 +21,8 @@ The include directive has the following format:
     #include <filename> [prefix]
 
 The ```<filename>``` part specifies the path, relative to the file with the ```#include``` directive, to the vspec file to replace the directive with.
+Additionally, include paths to search for the file can be added when using `vss-tools` using the `-I/--include-dirs`.
+The order of include paths to be searched is first the relative path of the vspec specifying the include and then given include paths in the given order.
 
 The optional ```[prefix]``` specifies a branch name to be
 prepended to all signal entries in the included file. This allows a vspec file

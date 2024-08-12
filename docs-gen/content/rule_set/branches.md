@@ -9,7 +9,7 @@ signals.
 
 A branch entry example is given below:
 
-```YAML
+```yaml
 Trunk:
   type: branch
   description: All signals related to the rear trunk

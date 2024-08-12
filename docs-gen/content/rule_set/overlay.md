@@ -30,12 +30,16 @@ and modify the standard catalog in a standardized way.
 
 Simply said, the tooling accepts, *n* additional spec files, next to the original
 specification file, which can overwrite or extend data in the VSS tree defined by
-the original specification.Before you start you should know:
-- **Overlay-files have to be valid specification files by themselves.**
-  In practice that means, that the path to a node has to be well defined.
+the original specification. Before you start you should know:
+- **Overlay files do not need to be valid specification files by themselves but the merged result counts**
+  In practice that means, that nodes in the overlay files (e.g. branches) do not need
+  to specify all the required attributes (like `type`, `description`, ...) if they are supposed to overwrite certain attributes
+  of an already existing branch in vss.
 - **You can omit parent branches if there is no need to change them**
-  Tooling supports implicit branches.
-- **Order matters.** The order on how the overlay files are called in the CLI
+  However, the tooling does not allow implicit branches by design.
+  So if you are creating new branches in overlays they need to be correctly linked
+  to an existing branch in vss.
+- **Order matters.** The order on how the overlay files are passed in the cli
   command matters! An example is shown in the figure below.
 
 The Figure below illustrates an example of the main specification and two
@@ -45,9 +49,11 @@ separate overlay files, an example call of the tooling and the resulting tree.
 *Figure: Overview on how overlays work within VSS*
 
 
-```YAML
+```yaml
 # In this overlay all parent branches are included.
-# That is not mandatory, as tooling supports implicit branches.
+# If you do not want to change existing branches, it is not necessary to specify them.
+# Also note that some elements are missing required attributes (description)
+# but since those elements will be merged with the ones in VSS, the result is valid.
 
 Vehicle:
     type: branch
@@ -73,11 +79,10 @@ Vehicle.Cabin.Door.IsOpen:
 ```
 *File: overlay_1.vspec*
 
-```YAML
-
-# This overlay use implicit branches.
-# This means that tooling will either reuse the existing Vehicle.Cabin.NewBranch,
-# or if not found create it with default values.
+```yaml
+# This overlay would not be valid on its own since `NewBranch` is missing.
+# When being applied in conjunction with the previous overlay, it would create
+# `HasNewAttribute` accordingly.
 
 Vehicle.Cabin.NewBranch.HasNewAttribute: #< ...with a new attribute
     type: attribute
@@ -95,22 +100,17 @@ Vehicle.Cabin.Door.IsOpen:
 ### Node content in Overlays
 
 If you are adding a node you need to specify all attributes required for that node type.
-If you are changing an existing node you typically only need to specify name and what is changed,
-like in the `Vehicle.Speed` example below.
-Vss-tools will then look up the node name and reuse existing definitions.
-An exception is if you are changing a node for a particular instance.
-In that case you need to give `type`and `datatype`even if they are not changed,
-as the lookup mechanism currently cannot extract them from the existing definition.
+If you are changing an existing node you typically only need to specify the name and what you would like to overwrite,
+like in the `Vehicle.Speed` example below. That also works for overwriting nodes that are created using `instances`.
+`vss-tools` will then look up the node name and merges the attributes.
 
-```YAML
+```yaml
 # Type and Datatype not needed
 Vehicle.Speed:
   unit: m/s
 
-# Type and Datatype needed as overlay affects a particular instance
+# Overwriting the unit of a node created by instances also works
 Vehicle.Occupant.Row1.DriverSide.HeadPosition.Yaw:
-  type: sensor
-  datatype: float
   unit: mm
 ```
 

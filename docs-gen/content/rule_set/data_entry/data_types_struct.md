@@ -102,7 +102,7 @@ This is not a problem as it always from context is clear whether a name refers t
 
 This could be a hypothetical content of a VSS datatype file
 
-```
+```yaml
 Types:
   type: branch
 
@@ -123,7 +123,7 @@ Types.DeliveryInfo.Receiver:
 
 This struct definition could then be referenced from the VSS signal tree
 
-```
+```yaml
 Delivery:
   datatype: Types.DeliveryInfo
   type: sensor
@@ -131,7 +131,7 @@ Delivery:
 
 The datatype file may contain sub-branches and `#include`-statements just like regular VSS files
 
-```
+```yaml
 Types:
   type: branch
 
@@ -168,7 +168,7 @@ They may support read of parts of signal, e.g. `DeliveryList.Receiver`
 It is allowed to use a struct type in an array
 
 
-```
+```yaml
 DeliveryList:
   datatype: Types.DeliveryInfo[]
   type: sensor
@@ -178,7 +178,7 @@ DeliveryList:
 By default the array has an arbitrary number of element and may be empty.
 If a fixed size array is wanted the keyword `arraysize` can be used to specify size:
 
-```
+```yaml
 DeliveryList:
   datatype: Types.DeliveryInfo[]
   arraysize: 5
@@ -201,7 +201,7 @@ For array datatypes (like above) VSS implementations may support several mechani
 
 It is allowed to refer to a structure datatype from within a structure
 
-```
+```yaml
 OpenHours:
   type: struct
   description: A struct datatype containing information on open hours
@@ -245,16 +245,15 @@ The order of declaration/definition shall not matter.
 As signals and datatypes are defined in different trees this is a topic only for struct definitions referring to other struct definitions.
 A hypothetical example is shown below. An item in the struct `DeliveryInfo` can refer to the struct `OpenHours` even if that struct
 is defined further down in the same file.
-If using `-vt < file>` multiple times all files except the first will be treated similar to overlays.
+If using `--types <file>` multiple times all files except the first will be treated similar to overlays.
 This means that is allowed to define `A.B.C` in multiple files, but then subsequent (re-)definitions will overwrite
-what has been defined previously.
+what has been defined previously. Note that if type files want to use structs from other files that the dependent
+files are specified first. Therefore the order of given type files matters.
 
-```
+```yaml
 DeliveryInfo:
   type: struct
   description: A struct datatype containing info for each delivery
-
-...
 
 DeliveryInfo.Open:
   datatype: OpenHours
@@ -264,9 +263,6 @@ DeliveryInfo.Open:
 OpenHours:
   type: struct
   description: A struct datatype containing information on open hours
-
-...
-
 ```
 
 ## Inline Struct
