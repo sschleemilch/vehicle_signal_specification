@@ -34,7 +34,7 @@ jobs:
 
       - name: Test mandatory targets
         run: |
-          if "${{ inputs.vss-version }}" != ""; then
+          if [ "${{ inputs.vss-version }}" != "" ]; then
             export VSS_VERSION="${{ inputs.vss-version }}"
           fi
           make mandatory_targets
