@@ -1,77 +1,191 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.129.0">
-    <meta name="generator" content="Relearn 6.0.0">
+    <meta name="generator" content="Hugo 0.166.0">
+    <meta name="generator" content="Relearn 9.2.1">
     <meta name="description" content="Introduction to Data Units in VSS It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units. For most signals in the VSS standard catalog, a data unit has been selected. A typical example is Vehicle.Speed, as shown below.
-Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed.The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry.">
+Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed. The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry. For the Vehicle.Speed example above this means that km/h has been selected, even if m/s from an SI-perspective would have been a better choice.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Data Units :: Vehicle Signal Specification">
     <meta name="twitter:description" content="Introduction to Data Units in VSS It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units. For most signals in the VSS standard catalog, a data unit has been selected. A typical example is Vehicle.Speed, as shown below.
-Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed.The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry.">
+Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed. The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry. For the Vehicle.Speed example above this means that km/h has been selected, even if m/s from an SI-perspective would have been a better choice.">
     <meta property="og:url" content="https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/data_units/index.html">
     <meta property="og:site_name" content="Vehicle Signal Specification">
     <meta property="og:title" content="Data Units :: Vehicle Signal Specification">
     <meta property="og:description" content="Introduction to Data Units in VSS It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units. For most signals in the VSS standard catalog, a data unit has been selected. A typical example is Vehicle.Speed, as shown below.
-Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed.The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry.">
-    <meta property="og:locale" content="en-us">
+Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed. The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry. For the Vehicle.Speed example above this means that km/h has been selected, even if m/s from an SI-perspective would have been a better choice.">
+    <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="VSS Rule Set">
     <meta property="article:published_time" content="2019-08-04T12:36:12+02:00">
     <meta property="article:modified_time" content="2019-08-04T12:36:12+02:00">
     <meta itemprop="name" content="Data Units :: Vehicle Signal Specification">
     <meta itemprop="description" content="Introduction to Data Units in VSS It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units. For most signals in the VSS standard catalog, a data unit has been selected. A typical example is Vehicle.Speed, as shown below.
-Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed.The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry.">
+Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed. The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry. For the Vehicle.Speed example above this means that km/h has been selected, even if m/s from an SI-perspective would have been a better choice.">
     <meta itemprop="datePublished" content="2019-08-04T12:36:12+02:00">
     <meta itemprop="dateModified" content="2019-08-04T12:36:12+02:00">
-    <meta itemprop="wordCount" content="1737">
+    <meta itemprop="wordCount" content="1745">
     <title>Data Units :: Vehicle Signal Specification</title><link rel="shortcut icon" href="/vehicle_signal_specification/images/fav.png" type="image/x-icon" />
 
-    <link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/nucleus.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/auto-complete.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/auto-complete.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/perfect-scrollbar.min.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/fonts.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fonts.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/theme.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/theme-blue.css?1792096953" rel="stylesheet" id="R-variant-style">
-    <link href="/vehicle_signal_specification/css/chroma-learn.css?1792096953" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/vehicle_signal_specification/css/variant.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/print.css?1792096953" rel="stylesheet" media="print">
-    <script src="/vehicle_signal_specification/js/variant.js?1792096953"></script>
-    <script>
-      window.relearn = window.relearn || {};
-      window.relearn.relBasePath='..\/..\/..';
-      window.relearn.relBaseUri='..\/..\/..\/..';
-      window.relearn.absBaseUri='https:\/\/covesa.github.io\/vehicle_signal_specification';
-      window.index_js_url="/vehicle_signal_specification/index.search.js";
-      // variant stuff
-      window.variants && variants.init( [ 'blue' ] );
-      // translations
-      window.T_Copy_to_clipboard = `Copy to clipboard`;
-      window.T_Copied_to_clipboard = `Copied to clipboard!`;
-      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
-      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
-      window.T_Reset_view = `Reset view`;
-      window.T_View_reset = `View reset!`;
-      window.T_No_results_found = `No results found for "{0}"`;
-      window.T_N_results_found = `{1} results found for "{0}"`;
-    </script>
+    <link href="/vehicle_signal_specification/css/auto-complete/auto-complete.min.78b49c23f59ffb08554285843ed4c841484fe34c489058b2991edc027cdd47fc.css" rel="stylesheet">
+    <script src="/vehicle_signal_specification/js/auto-complete/auto-complete.min.9657edd589a1ca6962a3cf03df5aa17f16f2c67350aea0a84dddbd8d5698316f.js" defer></script>
+    <script src="/vehicle_signal_specification/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
+    <script src="/vehicle_signal_specification/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
+    <script type="application/json" id="R-search-config">{
+      "indexFile": "searchindex.en.min.2c66fbc346d17b27bb777ae33c68b1b55764df1717d3bcc3e0938ce5e2e0e085.js"
+    }</script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.multi.min.ffaee7f1e07179595fe8a4b7c469761f90999470e1f04dcb0a94dc2c1cb44f9c.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.en.min.94d0a7cb1f111200e2f5be9dc32699cf266aaa29011e414bdcd36a18ea0fd5ee.js" defer></script>
+    <script type="application/json" id="R-search-lunr-config">{
+      "contentLangs": [
+        "en"
+      ]
+    }</script>
+    <link href="/vehicle_signal_specification/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet" media="print" class="R-async-style"><noscript><link href="/vehicle_signal_specification/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/css/theme.min.2719c80e85f34518eb09a5f9b655d5a7428a6a1fb25954e12cd77d3fb0ccf64c.css" rel="stylesheet">
+    <link href="/vehicle_signal_specification/css/format-html.min.5b99c0458b8ced5e6fc70abdd360cce6d06c2d740e2469f5bb9f4e2399f59b48.css" rel="stylesheet" id="R-format-style">
+    <script type="application/json" id="R-theme-config">{
+      "disableInlineCopyToClipboard": true,
+      "enableBlockCodeWrap": true,
+      "path": "/rule_set/data_entry/data_units/index.html",
+      "relBasePath": "../../..",
+      "relBaseUri": "../../../..",
+      "themevariants": [
+        "blue"
+      ],
+      "translations": {
+        "Browser_unsupported_feature": "This browser doesn't support this feature",
+        "Close_graph": "Close enlarged graph",
+        "Copied_to_clipboard": "Text copied to clipboard!",
+        "Copy_to_clipboard": "Copy text to clipboard",
+        "Deleted_text_end": "End of deleted text",
+        "Deleted_text_start": "Start of deleted text",
+        "Enlarge_graph": "Enlarge graph",
+        "History_cleared": "History cleared",
+        "Inserted_text_end": "End of inserted text",
+        "Inserted_text_start": "Start of inserted text",
+        "Link_copied_to_clipboard": "Link copied to clipboard!",
+        "N_matches_on_page": "{1} matches for \"{0}\" on this page",
+        "N_results_found": "{1} results found for \"{0}\"",
+        "No_results_found": "No results found for \"{0}\"",
+        "Reset_view": "Reset view",
+        "View_reset": "View reset!"
+      }
+    }</script>
+    <script src="/vehicle_signal_specification/js/theme-head.min.8c8c3bb99b655d91386ff7fefb5fceeb088bff4bb82bcde54fbef7dacb3388cc.js"></script>
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html">
+  <body class="mobile-support html" data-origin="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html">
+    <a id="R-skip-link" href="#R-body-inner">Skip to main content</a>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><a id="logo" href="https://covesa.github.io/vehicle_signal_specification/">
+  <img src="/vehicle_signal_specification/images/vss.png">
+</a>
+
+        <search><form action="/vehicle_signal_specification/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Open search page" aria-label="Open search page"><i class="fas fa-fw fa-search" aria-hidden="true"></i></button>
+            <input data-search-input name="search-by" class="search-by" type="search" aria-label="Search" placeholder="Search..." title="Search (CTRL+ALT+f)">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search" aria-label="Clear search"><i class="fas fa-fw fa-times" aria-hidden="true" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <nav id="R-content-wrapper" class="highlightable" aria-label="Menu" tabindex="-1">
+        <div id="R-scrollbar" aria-hidden="true"><div id="R-scrollbar-thumb"></div></div>
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/vehicle_signal_specification/introduction/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/introduction/index.html">Introduction</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/governance/index.html"><a class="padding" href="/vehicle_signal_specification/governance/index.html">Governance</a></li>
+            <li class="parent " data-nav-id="/vehicle_signal_specification/rule_set/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/rule_set/index.html">VSS Rule Set</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/basics/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/basics/index.html">Basic Rules</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/branches/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/branches/index.html">Branch Entry</a></li>
+            <li class="parent alwaysopen " data-nav-id="/vehicle_signal_specification/rule_set/data_entry/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/rule_set/data_entry/index.html">Data Entry</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_types/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_types/index.html">Datatypes</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html">Struct Types</a></li>
+            <li class="active " data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html" aria-current="page">Data Units</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html">Sensors, Actuators and Attributes</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/data_entry/default/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/default/index.html">Default Values</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/data_entry/enum/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/enum/index.html">Enums</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html">Value Restrictions</a></li></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/instances/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/instances/index.html">Instances</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/includes/index.html"><a class="padding" href="/vehicle_signal_specification/rule_set/includes/index.html">Includes</a></li></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/policies/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/policies/index.html">VSS Design Policy</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/catalog/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/catalog/index.html">VSS Standard Catalog</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/extensions/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/extensions/index.html">Extending and Customizing VSS</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/license/index.html"><a class="padding" href="/vehicle_signal_specification/license/index.html">License</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/ecosystem/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/ecosystem/index.html">Ecosystem</a><ul class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/covesa/vehicle_signal_specification"><a class="padding" href="https://github.com/covesa/vehicle_signal_specification" rel="external"><i class='fab fa-github'></i> Github repo</a></li>
+            <li class="" data-nav-id="https://github.com/covesa/vehicle_signal_specification/releases"><a class="padding" href="https://github.com/covesa/vehicle_signal_specification/releases" rel="external"><i class='fas fa-download'></i> Releases</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><center>
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download covesa/vehicle_signal_specification on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification" data-icon="octicon-star" data-show-count="true" aria-label="Star covesa/vehicle_signal_specification on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    Latest Released Version: 6.1
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</div>
+      </nav>
+    </aside>
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
-      <nav id="R-topbar">
-        <div class="topbar-wrapper">
-          <div class="topbar-sidebar-divider"></div>
+      <header id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-nav" type="button" title="Menu (CTRL&#43;ALT&#43;n)" aria-label="Menu (CTRL&#43;ALT&#43;n)" aria-expanded="false"><i class="fa-fw fas fa-bars" aria-hidden="true"></i></button></span>
             </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)" aria-label="Table of Contents (CTRL&#43;ALT&#43;t)" aria-expanded="false"><i class="fa-fw fas fa-table-list" aria-hidden="true"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+                <div class="topbar-content-wrapper" tabindex="-1">
+<nav class="TableOfContents" aria-label="Table of Contents">
   <ul>
     <li><a href="#introduction-to-data-units-in-vss">Introduction to Data Units in VSS</a>
       <ul>
@@ -97,23 +211,26 @@ Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle spee
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/index.html"><span itemprop="name">Vehicle Signal Specification</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/rule_set/index.html"><span itemprop="name">VSS Rule Set</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/rule_set/data_entry/index.html"><span itemprop="name">Data Entry</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Data Units</span><meta itemprop="position" content="4"></li>
-          </ol>
+          <div class="topbar-area topbar-area-middle" data-area="middle">
+            <nav class="topbar-breadcrumbs breadcrumbs highlightable" aria-label="Breadcrumbs" data-overflow-title="Vehicle Signal Specification &gt; VSS Rule Set &gt; Data Entry &gt; Data Units">
+              <ol itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/vehicle_signal_specification/index.html"><span itemprop="name">Vehicle Signal Specification</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/vehicle_signal_specification/rule_set/index.html"><span itemprop="name">VSS Rule Set</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/vehicle_signal_specification/rule_set/data_entry/index.html"><span itemprop="name">Data Entry</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="" aria-current="page"><span itemprop="name">Data Units</span><meta itemprop="position" content="4"></li>
+              </ol>
+            </nav>
+          </div>
           <div class="topbar-area topbar-area-end" data-area="end">
-				
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/covesa/vehicle_signal_specification/edit/master/docs-gen/content/rule_set/data_entry/data_units.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Edit (CTRL+ALT+w)" href="https://github.com/covesa/vehicle_signal_specification/edit/master/docs-gen/content/rule_set/data_entry/data_units.md" rel="external" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html" title="Struct Types (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Struct Types (🡐)" href="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html" title="Struct Types (🡐)"><i class="fa-fw fas fa-chevron-left" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html" title="Sensors, Actuators and Attributes (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Sensors, Actuators and Attributes (🡒)" href="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html" title="Sensors, Actuators and Attributes (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="More" aria-label="More" aria-expanded="false"><i class="fa-fw fas fa-ellipsis-v" aria-hidden="true"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper">
+                <div class="topbar-content-wrapper" tabindex="-1">
                   <div class="topbar-area topbar-area-more" data-area="more">
                   </div>
                 </div>
@@ -121,30 +238,31 @@ Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle spee
             </div>
           </div>
         </div>
-      </nav>
+      </header>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+      <main id="R-body-inner" class="highlightable rule_set" tabindex="-1">
         <div class="flex-block-wrapper">
-          <article class="default">
-            <header class="headline">
-            </header>
+<article class="default">
+  <header class="headline">
+  </header>
 
 <h1 id="data-units">Data Units</h1>
 
-<h2 id="introduction-to-data-units-in-vss">Introduction to Data Units in VSS</h2>
+<h2 id="introduction-to-data-units-in-vss">Introduction to Data Units in VSS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units.
 For most signals in the VSS standard catalog, a data unit has been selected. A typical example is <code>Vehicle.Speed</code>, as shown below.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Speed</span>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Speed</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">float</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">sensor</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">km/h</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Vehicle speed.</span></span></span></code></pre></div><p>The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Vehicle speed.</span></span></span></code></pre></div>
+<p>The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units,
 or a unit commonly used within the vehicle industry. For the <code>Vehicle.Speed</code> example above this means that <code>km/h</code> has been selected,
 even if <code>m/s</code> from an SI-perspective would have been a better choice.</p>
 <p>It must be noted that the selected unit does not imply that the value of <code>Vehicle.Speed</code> always needs to be sent or visualized
 as <code>km/h</code> (with float as datatype). A user interface or API may show or request vehicle speed in any unit it likes,
 and a transport protocol may send speed in another unit, possibly also involving scaling and offset.
-But in protocols not explicitly specifying data units (like <a href="https://raw.githack.com/w3c/automotive/gh-pages/spec/VISSv2_Core.html" rel="external" target="_blank">VISS</a>)
+But in protocols not explicitly specifying data units (like <a href="https://raw.githack.com/w3c/automotive/gh-pages/spec/VISSv2_Core.html" rel="external">VISS</a>)
 it is expected that <code>Vehicle.Speed</code> is sent and received as <code>km/h</code> (without scaling or offset).
 However since units define possible <code>allowed-datatypes</code> the given <code>datatype</code> has to match the allowed ones.</p>
 <p>VSS does not offer any syntax for defining alternative units for a specific signal.
@@ -154,58 +272,61 @@ The VSS list of units does not specify conversion factors, so even if VSS list b
 the quantity <code>velocity</code>, it is not specified how they relate to each other.</p>
 <p>In some cases it is natural to omit the data unit. This concerns typically signals where datatype <code>string</code> is used,
 but also signals where the value just represents a number (dimensionless quantities), like in the example below:</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Cabin.DoorCount</span>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Cabin.DoorCount</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">uint8</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">attribute</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">default</span>: <span style="color:#ae81ff">4</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Number of doors in vehicle.</span></span></span></code></pre></div><h3 id="logical-data-units">Logical Data Units</h3>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Number of doors in vehicle.</span></span></span></code></pre></div>
+<h3 id="logical-data-units">Logical Data Units<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <p>VSS supports <code>percent</code> as data unit, typically with 0 to 100% as the allowed range.
 In some cases, the definition on how to calculate the signal value is obvious, like for <code>Vehicle.Powertrain.FuelSystem.Level</code>
 below. It is likely that all VSS users will calculate fuel level in the same way, i.e. the meaning of a fuel level of 50%
 is well agreed, the liters of fuel in the tank is exactly 50% of nominal capacity.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Powertrain.FuelSystem.Level</span>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Powertrain.FuelSystem.Level</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">uint8</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">sensor</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">percent</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">min</span>: <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">max</span>: <span style="color:#ae81ff">100</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Level in fuel tank as percent of capacity. 0 = empty. 100 = full.</span></span></span></code></pre></div><p>In other cases, the formula for calculating the signal is not obvious and is not specified in VSS. A typical example is shown below for clutch wear.
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Level in fuel tank as percent of capacity. 0 = empty. 100 = full.</span></span></span></code></pre></div>
+<p>In other cases, the formula for calculating the signal is not obvious and is not specified in VSS. A typical example is shown below for clutch wear.
 While most VSS users likely can agree that a brand new clutch shall have 0 as &ldquo;ClutchWear&rdquo;,
 the exact formula for calculating clutch wear for a used clutch will likely be vehicle specific.
 Some vehicles might monitor actual wear, others might estimate it based on vehicle usage.
 This is in VSS called a logical range, a VSS user knows what range to use but are free to define the formula for calculating the value.
 Values from different vehicles (of different make/model) can not always be compared, as the formula used for calculation may differ.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Powertrain.Transmission.ClutchWear</span>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Powertrain.Transmission.ClutchWear</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">uint8</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">sensor</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">percent</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">max</span>: <span style="color:#ae81ff">100</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Clutch wear as percent. 0 = no wear. 100 = worn.</span></span></span></code></pre></div><h2 id="supported-data-units-in-vss-standard-catalog">Supported Data Units in VSS Standard Catalog</h2>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">description</span>: <span style="color:#ae81ff">Clutch wear as percent. 0 = no wear. 100 = worn.</span></span></span></code></pre></div>
+<h2 id="supported-data-units-in-vss-standard-catalog">Supported Data Units in VSS Standard Catalog<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>The VSS syntax does not in itself specify what units can be used, the unit attribute as declared for signals in *.vspec files is optional and can contain an arbitrary string value.
-<a href="https://github.com/COVESA/vss-tools" rel="external" target="_blank">VSS-Tools</a> however require that all units used are defined
+<a href="https://github.com/COVESA/vss-tools" rel="external">VSS-Tools</a> however require that all units used are defined
 and therefore is also a requirement for signals in the VSS standard catalog.
 Units are defined by including them in a unit file with syntax as described below.
 One or more unit files can be specified by the <code>-u</code> parameter and, if not given, the tools search for a file <code>units.yaml</code>
 in the same directory as the root *.vspec file.</p>
 <p>For the VSS standard catalog the VSS-project has defined a set of units that can be used for signals in the VSS standard catalog.
 This list is composed of definitions according to International Units (SI) and few automotive-specific units:
-<a href="https://www.iso.org/standard/30669.html" rel="external" target="_blank">Specification</a>, <a href="https://en.wikipedia.org/wiki/International_System_of_Units" rel="external" target="_blank">Wikipedia</a>.
+<a href="https://www.iso.org/standard/30669.html" rel="external">Specification</a>, <a href="https://en.wikipedia.org/wiki/International_System_of_Units" rel="external">Wikipedia</a>.
 It can be noted that not all units in the list are currently used by the VSS standard catalog,
 but they may be used in the future or may be used for customization of the VSS catalog.</p>
-<p>The VSS list of units for the standard catalog exists in <a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/units.yaml" rel="external" target="_blank">units.yaml</a>.</p>
-<h3 id="addition-of-new-data-units-to-vss-standard-catalog">Addition of new Data Units to VSS standard catalog</h3>
-<p>The <a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/units.yaml" rel="external" target="_blank">list of units</a> in VSS standard catalog
+<p>The VSS list of units for the standard catalog exists in <a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/units.yaml" rel="external">units.yaml</a>.</p>
+<h3 id="addition-of-new-data-units-to-vss-standard-catalog">Addition of new Data Units to VSS standard catalog<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<p>The <a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/units.yaml" rel="external">list of units</a> in VSS standard catalog
 is not static. New units can be added if needed for signals in the VSS standard catalog, or if the VSS-project considers that
 the unit might be useful for customization of the VSS tree. If you would like to propose a new unit to be added to the list
 please create a pull request where the new unit is added to
-<a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/units.yaml" rel="external" target="_blank">units.yaml</a>.</p>
+<a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/units.yaml" rel="external">units.yaml</a>.</p>
 <p>If the unit is needed for a new signal in the VSS standard catalog you can propose the new signal and the new unit
 in the same Pull Request.</p>
-<h2 id="reusing-existing-units-and-quantity-kinds-from-qudt">Reusing existing units and quantity kinds from QUDT</h2>
-<p>The introduction of optional QUDT mappings in the unit definitions enables direct reuse of the extensive standard vocabulary provided by <a href="https://qudt.org" rel="external" target="_blank">QUDT (Quantities, Units, Dimensions, and Data Types)</a>. By referencing QUDT units and quantity kinds, VSS can benefit from the rich metadata, standardized definitions, and available transformation formulas maintained by the QUDT community. This not only improves semantic interoperability but also allows for easier integration with external systems and tools that already leverage QUDT. With this approach, it is now possible to specify explicit mappings to QUDT units and quantity kinds, making it easier to leverage existing resources and ensure consistency across domains.</p>
-<h2 id="unit-file-syntax">Unit file syntax</h2>
+<h2 id="reusing-existing-units-and-quantity-kinds-from-qudt">Reusing existing units and quantity kinds from QUDT<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>The introduction of optional QUDT mappings in the unit definitions enables direct reuse of the extensive standard vocabulary provided by <a href="https://qudt.org" rel="external">QUDT (Quantities, Units, Dimensions, and Data Types)</a>. By referencing QUDT units and quantity kinds, VSS can benefit from the rich metadata, standardized definitions, and available transformation formulas maintained by the QUDT community. This not only improves semantic interoperability but also allows for easier integration with external systems and tools that already leverage QUDT. With this approach, it is now possible to specify explicit mappings to QUDT units and quantity kinds, making it easier to leverage existing resources and ensure consistency across domains.</p>
+<h2 id="unit-file-syntax">Unit file syntax<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>Unit files follow the syntax defined below:</p>
-<div class="highlight wrap-code"><pre tabindex="0"><code>[
+<pre><code>[
  &lt;vss-unit-identifier&gt;: # Typically unit abbreviation, like km/h or mm, but no special characters
     definition: &lt;string&gt;
     [unit: &lt;string&gt;] # Full name of unit
@@ -216,14 +337,15 @@ in the same Pull Request.</p>
       unit: &lt;string&gt;      # QUDT unit URI
       quantity-kind: &lt;string&gt; # QUDT quantity kind URI
     ]
-]*</code></pre></div><p>The <code>vss-unit-identifier</code> and the string specified as <code>unit</code> must be unique.</p>
+]*</code></pre>
+<p>The <code>vss-unit-identifier</code> and the string specified as <code>unit</code> must be unique.</p>
 <p>The VSS term <code>quantity</code> corresponds roughly to the term <code>quantity</code> as defined in for example ISO 80000.
 Typical example are <code>length</code>, <code>mass</code> and <code>velocity</code> that all can be expressed in SI-units.
 However, from a VSS perspective quantities do not need to correspond to physical quantities.
 It could be an arbitrary term, but it is generally expected that it is possible to convert between values
 using different units but defined with the same quantity.</p>
 <p>Example:</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">m</span>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">m</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">definition</span>: <span style="color:#ae81ff">Length measured in meters</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">meter</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">quantity</span>: <span style="color:#ae81ff">length</span>
@@ -239,7 +361,8 @@ using different units but defined with the same quantity.</p>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">allowed-datatypes</span>: [<span style="color:#e6db74">&#39;numeric&#39;</span>]
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">qudt</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">http://qudt.org/vocab/unit/MilliM</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">quantity-kind</span>: <span style="color:#ae81ff">https://qudt.org/vocab/quantitykind/Length</span></span></span></code></pre></div><p>As <code>m</code> and <code>mm</code> are defined with the same quantity it is expected that you can convert a value from <code>m</code> to <code>mm</code>.</p>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">quantity-kind</span>: <span style="color:#ae81ff">https://qudt.org/vocab/quantitykind/Length</span></span></span></code></pre></div>
+<p>As <code>m</code> and <code>mm</code> are defined with the same quantity it is expected that you can convert a value from <code>m</code> to <code>mm</code>.</p>
 <p>The <code>allowed-datatypes</code> attributes can be used to specify which VSS datatypes can contain values of a particular unit.
 For most units the symbolic datatype <code>numeric</code> meaning any float or integer datatype can be used.
 As an example, both <code>uint8</code> and <code>float</code> can be used to represent a length value.
@@ -252,7 +375,7 @@ For some units more specific datatype restrictions are relevant. Some examples:<
 <p>The <code>deprecation</code> keyword can be used to indicate that a specific unit may be removed in the future.
 Tooling shall preferably give a warning if a signal uses a deprecated unit or the unit used belongs to a deprecated quantity.
 The reason should preferably list when and why the unit is deprecated, a hypothetical example is given below:</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#f92672">inch</span>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#f92672">inch</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">definition</span>: <span style="color:#ae81ff">Distance measured in inches</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">inch (deprecated)</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">quantity</span>: <span style="color:#ae81ff">distance</span>
@@ -260,183 +383,49 @@ The reason should preferably list when and why the unit is deprecated, a hypothe
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">in</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">definition</span>: <span style="color:#ae81ff">Distance measured in inches</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">inch</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">quantity</span>: <span style="color:#ae81ff">distance</span></span></span></code></pre></div><p>Note that in the example above the <code>unit</code> field differs for the two signals, as unqiue names must be used.</p>
-<h2 id="quantity-file-syntax">Quantity file syntax</h2>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">quantity</span>: <span style="color:#ae81ff">distance</span></span></span></code></pre></div>
+<p>Note that in the example above the <code>unit</code> field differs for the two signals, as unqiue names must be used.</p>
+<h2 id="quantity-file-syntax">Quantity file syntax<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>Defining of quantities is required.
 If tooling supports quantity files it can verify that all units provided in unit files
 use defined quantities.
 For the VSS standard catalog it is required that matching quantities have been defined for all units.</p>
-<div class="highlight wrap-code"><pre tabindex="0"><code>  [
+<pre><code>  [
     &lt;vss-quantity-identifier&gt;: # Identifier preferably taken from a standard, like ISO 80000
       definition: &lt;string&gt;
       [remark: &lt;string&gt;] # remark as defined in for example ISO 80000
       [comment: &lt;string&gt;]
       [deprecation: &lt;reason&gt;]
-  ]*</code></pre></div><p>The VSS list of quantities for the standard catalog exists in <a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/quantities.yaml" rel="external" target="_blank">quantities.yaml</a>.</p>
-<h3 id="addition-of-new-quantities-to-vss-standard-catalog">Addition of new Quantities to VSS standard catalog</h3>
-<p>The <a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/quantities.yaml" rel="external" target="_blank">list of quantities</a> in VSS standard catalog
+  ]*</code></pre>
+<p>The VSS list of quantities for the standard catalog exists in <a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/quantities.yaml" rel="external">quantities.yaml</a>.</p>
+<h3 id="addition-of-new-quantities-to-vss-standard-catalog">Addition of new Quantities to VSS standard catalog<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<p>The <a href="https://github.com/COVESA/vehicle_signal_specification/blob/master/spec/quantities.yaml" rel="external">list of quantities</a> in VSS standard catalog
 is not static. New quantities can be added if needed for units in the VSS standard catalog, or if the VSS-project considers that
 the quantity might be useful for custom units. If you would like to propose a new quantity to be added to the list
 please create a pull request.</p>
 <p>If the quantity is needed for a new unit in the VSS standard catalog you can propose the new quantity and the new unit
 in the same Pull Request.</p>
-<h2 id="defining-custom-units">Defining custom units</h2>
+<h2 id="defining-custom-units">Defining custom units<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>It is possible to define custom units in a unit file.
-Assume for instance you want to have a signal showing remaining range in <a href="https://en.wikipedia.org/wiki/Furlong" rel="external" target="_blank">furlong</a>.
+Assume for instance you want to have a signal showing remaining range in <a href="https://en.wikipedia.org/wiki/Furlong" rel="external">furlong</a>.
 Then you could add an additional unit <code>furlong</code>. No need to specify <code>unit</code> or <code>symbol</code> as they equals the default (i.e. &ldquo;furlong&rdquo;).
 As this unit is not commonly used and not described in any standards, it might be relevant to describe how it can be converted to other units.
 That is however only informative, as it a custom unit a downstream implementation supporting unit conversion may not support automatic conversion
 of furlong to other units.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">units</span>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">units</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">furlong</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">definition</span>: <span style="color:#ae81ff">Length measured in furlong, 1 furlong equals 201.1680 m</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">quantity</span>: <span style="color:#ae81ff">length</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">allowed-datatypes</span>: [<span style="color:#e6db74">&#39;numeric&#39;</span>]</span></span></code></pre></div>
-            <footer class="footline">
-            </footer>
-          </article>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar' aria-hidden="true"></i> Aug 4, 2019
+  </footer>
+</article>
         </div>
       </main>
     </div>
-    <aside id="R-sidebar" class="default-animation">
-      <div id="R-header-topbar" class="default-animation"></div>
-      <div id="R-header-wrapper" class="default-animation">
-        <div id="R-header" class="default-animation">
-<a id="logo" href="https://covesa.github.io/vehicle_signal_specification/">
-  <img src="/vehicle_signal_specification/images/vss.png">
-</a>
-
-        </div>
-
-        <search><form action="/vehicle_signal_specification/search.html" method="get">
-          <div class="searchbox default-animation">
-            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
-            <label class="a11y-only" for="R-search-by">Search</label>
-            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
-            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
-          </div>
-        </form></search>
-        <script>
-          var contentLangs=['en'];
-        </script>
-        <script src="/vehicle_signal_specification/js/auto-complete.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.stemmer.support.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.multi.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.en.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/search.js?1792096953" defer></script>
-      </div>
-      <div id="R-homelinks" class="default-animation">
-        <hr class="padding">
-      </div>
-      <div id="R-content-wrapper" class="highlightable">
-        <div id="R-topics">
-          <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/introduction/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/index.html">Introduction</a><ul id="R-subsections-f5db5b284a3d023503978d00824e9c16" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/introduction/overview/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/overview/index.html">Overview</a></li>
-          <li data-nav-id="/vehicle_signal_specification/introduction/taxonomy/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/taxonomy/index.html">Taxonomies</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/governance/index.html" class=""><a class="padding" href="/vehicle_signal_specification/governance/index.html">Governance</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/index.html" class="parent "><a class="padding" href="/vehicle_signal_specification/rule_set/index.html">VSS Rule Set</a><ul id="R-subsections-816430a737ffa7bef5da453d8c2d55d4" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/rule_set/basics/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/basics/index.html">Basic Rules</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/branches/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/branches/index.html">Branch Entry</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/index.html" class="parent alwaysopen"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/index.html">Data Entry</a><ul id="R-subsections-ba77ba218fcc0133bc138c588fbb6eb9" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_types/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_types/index.html">Datatypes</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html">Struct Types</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html" class="active"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html">Data Units</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html">Sensors, Actuators and Attributes</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/default/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/default/index.html">Default Values</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/enum/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/enum/index.html">Enums</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html">Value Restrictions</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/instances/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/instances/index.html">Instances</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/includes/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/includes/index.html">Includes</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/policies/index.html" class=""><a class="padding" href="/vehicle_signal_specification/policies/index.html">VSS Design Policy</a><ul id="R-subsections-305615410f40802ad71dde0994916cc5" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/policies/unit_datatype/index.html" class=""><a class="padding" href="/vehicle_signal_specification/policies/unit_datatype/index.html">Unit and Datatype Policy</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/catalog/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/index.html">VSS Standard Catalog</a><ul id="R-subsections-665f6cae1c56b0dcfe0d69bfe3f4be93" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/catalog/energy_management/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/energy_management/index.html">Energy Management</a></li>
-          <li data-nav-id="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html">Vehicle Motion Management</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/index.html">Extending and Customizing VSS</a><ul id="R-subsections-6bd9c98d69baa9a2d1581189a2aaf28a" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/extensions/overlay/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/overlay/index.html">VSS Overlay Mechanism</a></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html">Cybersecurity Profile</a></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/network_serialization_profile/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/network_serialization_profile/index.html">Network Serialization Profile</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/license/index.html" class=""><a class="padding" href="/vehicle_signal_specification/license/index.html">License</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/index.html">Ecosystem</a><ul id="R-subsections-30d29cf6aaa7fb1e0e056430337d3cd8" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/tools/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/tools/index.html">Official VSS-Tools</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/standards/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/standards/index.html">Related Standards</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/software/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/software/index.html">Software &amp; Solutions</a></li></ul></li>
-          </ul>
-        </div>
-        <div id="R-shortcuts">
-          <div class="nav-title padding">More</div>
-          <ul class="space">
-            <li><a class="padding" href="https://github.com/covesa/vehicle_signal_specification"><i class='fab fa-github'></i> Github repo</a></li>
-            <li><a class="padding" href="https://github.com/covesa/vehicle_signal_specification/releases"><i class='fas fa-download'></i> Releases</a></li>
-          </ul>
-        </div>
-        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
-        <div id="R-menu-footer">
-          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
-          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
-            <ul>
-              <li id="R-select-language-container" class="footerLangSwitch">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-language"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <label class="a11y-only" for="R-select-language">Language</label>
-                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html" lang="en-us" selected></option>
-                    </select>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-              </li>
-              <li id="R-select-variant-container" class="footerVariantSwitch">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-paint-brush"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <label class="a11y-only" for="R-select-variant">Theme</label>
-                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                      <option id="R-select-variant-blue" value="blue" selected>Blue</option>
-                    </select>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-                <script>window.variants && variants.markSelectedVariant();</script>
-              </li>
-              <li class="footerVisitedLinks">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-history"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <button onclick="clearHistory();">Clear History</button>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div id="R-footer" class="footerFooter showFooter"><center>
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download covesa/vehicle_signal_specification on GitHub">Download</a>
-
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification" data-icon="octicon-star" data-show-count="true" aria-label="Star covesa/vehicle_signal_specification on GitHub">Star</a>
-
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
-
-    Latest Released Version: 6.1
-</center>
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-          </div>
-        </div>
-      </div>
-    </aside>
-    <script src="/vehicle_signal_specification/js/clipboard.min.js?1792096953" defer></script>
-    <script src="/vehicle_signal_specification/js/perfect-scrollbar.min.js?1792096953" defer></script>
-    <script src="/vehicle_signal_specification/js/theme.js?1792096953" defer></script>
+    <script src="/vehicle_signal_specification/js/theme.min.f66b851115ea46f239f782bd19e65c09786103c8cb054f72664b912bc561d1c8.js" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

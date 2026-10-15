@@ -13,14 +13,14 @@
       <link>https://covesa.github.io/vehicle_signal_specification/rule_set/basics/index.html</link>
       <pubDate>Sun, 04 Aug 2019 13:05:11 +0200</pubDate>
       <guid>https://covesa.github.io/vehicle_signal_specification/rule_set/basics/index.html</guid>
-      <description>Specification format The Vehicle Signal Specification domain specification consist of vspec files. vspec files are YAML files following the rule set defined for VSS. They also support the use of include directives to refer to other vspec files, much like #include in C/C++. . Please note that, from a YAML perspective, the include directive is just another comment.&#xA;The file VehicleSignalSpecification.vspec serves as root and includes other vspec files from the VSS repository.</description>
+      <description>Specification format The Vehicle Signal Specification domain specification consist of vspec files. vspec files are YAML files following the rule set defined for VSS. They also support the use of include directives to refer to other vspec files, much like #include in C/C++. . Please note that, from a YAML perspective, the include directive is just another comment.</description>
     </item>
     <item>
       <title>Branch Entry</title>
       <link>https://covesa.github.io/vehicle_signal_specification/rule_set/branches/index.html</link>
       <pubDate>Wed, 31 Jul 2019 15:27:36 +0200</pubDate>
       <guid>https://covesa.github.io/vehicle_signal_specification/rule_set/branches/index.html</guid>
-      <description>A branch entry describes a tree branch (or node) containing other branches and signals.&#xA;A branch entry example is given below:&#xA;Vehicle.Trunk: type: branch description: All signals related to the rear trunk aggregate: falseEach data entry has a name, in the example above Vehicle.Trunk. VSS use a dot-notated name style where the full path of a branch consists of all parent branches from the root node separated by dots and at the end the name of the current branch.</description>
+      <description>A branch entry describes a tree branch (or node) containing other branches and signals.&#xA;A branch entry example is given below:&#xA;Vehicle.Trunk: type: branch description: All signals related to the rear trunk aggregate: false Each data entry has a name, in the example above Vehicle.Trunk. VSS use a dot-notated name style where the full path of a branch consists of all parent branches from the root node separated by dots and at the end the name of the current branch. In the standard VSS catalog the root node is called Vehicle.</description>
     </item>
     <item>
       <title>Data Entry</title>
@@ -34,7 +34,7 @@
       <link>https://covesa.github.io/vehicle_signal_specification/rule_set/instances/index.html</link>
       <pubDate>Wed, 31 Jul 2019 15:27:36 +0200</pubDate>
       <guid>https://covesa.github.io/vehicle_signal_specification/rule_set/instances/index.html</guid>
-      <description>VSS resembles primarily the physical structure of the vehicle, so quite often there is a need to repeat branches and data entries (e.g. doors, axles, etc). To avoid hard-coded repetitions of branches and data entries in the specification an instance-concept is supported. Instances remove the need of repeating definitions, by defining at the node itself how often it occurs in the resulting tree. They are meant as a short-cut in the specification and interpreted by the tools.</description>
+      <description>VSS resembles primarily the physical structure of the vehicle, so quite often there is a need to repeat branches and data entries (e.g. doors, axles, etc). To avoid hard-coded repetitions of branches and data entries in the specification an instance-concept is supported. Instances remove the need of repeating definitions, by defining at the node itself how often it occurs in the resulting tree. They are meant as a short-cut in the specification and interpreted by the tools. As an example is shown below for doors:</description>
     </item>
     <item>
       <title>Includes</title>

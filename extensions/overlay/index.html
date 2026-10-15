@@ -1,77 +1,182 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.129.0">
-    <meta name="generator" content="Relearn 6.0.0">
+    <meta name="generator" content="Hugo 0.166.0">
+    <meta name="generator" content="Relearn 9.2.1">
     <meta name="description" content="VSS defines the standard catalog for vehicle signals independent of the used protocol and environment. In order to adopt the specification we realize that certain additions and modifications to the standard catalog are necessary. VSS Overlays are meant to bring you a standardized way of handling those changes.
 The following features with the intended usage patterns are currently supported:
-Adding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts.">
+Adding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts. Deleting nodes: Deleting nodes not relevant for the vehicle. Changing the value of existing metadata: The standard catalog defines metadata based on what is assumed to be an average vehicle. Configurations may differ slightly (e.g. the instantiation of number of available seats), or special situations that require a (limited) modification of existing metadata. Adding new key/value pairs as additional metadata: Extending the model with richer information is a fundamental feature enabled by the layer concept. For example, deploying VSS into a specific scenario or with a particular binding/technology often needs some additional information. Multiple layer files: VSS layers can be split into several files in order to clearly separate concerns. Layering allows all the features above to be applied in a composable manner. In order to keep a determinstic result a clear order has to remain. Wildcard keys: A single overlay entry can be applied to multiple nodes at once using glob-style * wildcards. How does it work? Simply said, the tooling accepts, n additional spec files, next to the original specification file, which can overwrite or extend data in the VSS tree defined by the original specification. Before you start you should know:">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="VSS Overlay Mechanism :: Vehicle Signal Specification">
     <meta name="twitter:description" content="VSS defines the standard catalog for vehicle signals independent of the used protocol and environment. In order to adopt the specification we realize that certain additions and modifications to the standard catalog are necessary. VSS Overlays are meant to bring you a standardized way of handling those changes.
 The following features with the intended usage patterns are currently supported:
-Adding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts.">
+Adding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts. Deleting nodes: Deleting nodes not relevant for the vehicle. Changing the value of existing metadata: The standard catalog defines metadata based on what is assumed to be an average vehicle. Configurations may differ slightly (e.g. the instantiation of number of available seats), or special situations that require a (limited) modification of existing metadata. Adding new key/value pairs as additional metadata: Extending the model with richer information is a fundamental feature enabled by the layer concept. For example, deploying VSS into a specific scenario or with a particular binding/technology often needs some additional information. Multiple layer files: VSS layers can be split into several files in order to clearly separate concerns. Layering allows all the features above to be applied in a composable manner. In order to keep a determinstic result a clear order has to remain. Wildcard keys: A single overlay entry can be applied to multiple nodes at once using glob-style * wildcards. How does it work? Simply said, the tooling accepts, n additional spec files, next to the original specification file, which can overwrite or extend data in the VSS tree defined by the original specification. Before you start you should know:">
     <meta property="og:url" content="https://covesa.github.io/vehicle_signal_specification/extensions/overlay/index.html">
     <meta property="og:site_name" content="Vehicle Signal Specification">
     <meta property="og:title" content="VSS Overlay Mechanism :: Vehicle Signal Specification">
     <meta property="og:description" content="VSS defines the standard catalog for vehicle signals independent of the used protocol and environment. In order to adopt the specification we realize that certain additions and modifications to the standard catalog are necessary. VSS Overlays are meant to bring you a standardized way of handling those changes.
 The following features with the intended usage patterns are currently supported:
-Adding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts.">
-    <meta property="og:locale" content="en-us">
+Adding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts. Deleting nodes: Deleting nodes not relevant for the vehicle. Changing the value of existing metadata: The standard catalog defines metadata based on what is assumed to be an average vehicle. Configurations may differ slightly (e.g. the instantiation of number of available seats), or special situations that require a (limited) modification of existing metadata. Adding new key/value pairs as additional metadata: Extending the model with richer information is a fundamental feature enabled by the layer concept. For example, deploying VSS into a specific scenario or with a particular binding/technology often needs some additional information. Multiple layer files: VSS layers can be split into several files in order to clearly separate concerns. Layering allows all the features above to be applied in a composable manner. In order to keep a determinstic result a clear order has to remain. Wildcard keys: A single overlay entry can be applied to multiple nodes at once using glob-style * wildcards. How does it work? Simply said, the tooling accepts, n additional spec files, next to the original specification file, which can overwrite or extend data in the VSS tree defined by the original specification. Before you start you should know:">
+    <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Extending and Customizing VSS">
     <meta itemprop="name" content="VSS Overlay Mechanism :: Vehicle Signal Specification">
     <meta itemprop="description" content="VSS defines the standard catalog for vehicle signals independent of the used protocol and environment. In order to adopt the specification we realize that certain additions and modifications to the standard catalog are necessary. VSS Overlays are meant to bring you a standardized way of handling those changes.
 The following features with the intended usage patterns are currently supported:
-Adding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts.">
-    <meta itemprop="wordCount" content="965">
+Adding new nodes: By adding nodes the standard catalog can be extended with proprietary concepts. Deleting nodes: Deleting nodes not relevant for the vehicle. Changing the value of existing metadata: The standard catalog defines metadata based on what is assumed to be an average vehicle. Configurations may differ slightly (e.g. the instantiation of number of available seats), or special situations that require a (limited) modification of existing metadata. Adding new key/value pairs as additional metadata: Extending the model with richer information is a fundamental feature enabled by the layer concept. For example, deploying VSS into a specific scenario or with a particular binding/technology often needs some additional information. Multiple layer files: VSS layers can be split into several files in order to clearly separate concerns. Layering allows all the features above to be applied in a composable manner. In order to keep a determinstic result a clear order has to remain. Wildcard keys: A single overlay entry can be applied to multiple nodes at once using glob-style * wildcards. How does it work? Simply said, the tooling accepts, n additional spec files, next to the original specification file, which can overwrite or extend data in the VSS tree defined by the original specification. Before you start you should know:">
+    <meta itemprop="wordCount" content="972">
     <title>VSS Overlay Mechanism :: Vehicle Signal Specification</title><link rel="shortcut icon" href="/vehicle_signal_specification/images/fav.png" type="image/x-icon" />
 
-    <link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/nucleus.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/auto-complete.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/auto-complete.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/perfect-scrollbar.min.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/fonts.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fonts.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/theme.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/theme-blue.css?1792096953" rel="stylesheet" id="R-variant-style">
-    <link href="/vehicle_signal_specification/css/chroma-learn.css?1792096953" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/vehicle_signal_specification/css/variant.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/print.css?1792096953" rel="stylesheet" media="print">
-    <script src="/vehicle_signal_specification/js/variant.js?1792096953"></script>
-    <script>
-      window.relearn = window.relearn || {};
-      window.relearn.relBasePath='..\/..';
-      window.relearn.relBaseUri='..\/..\/..';
-      window.relearn.absBaseUri='https:\/\/covesa.github.io\/vehicle_signal_specification';
-      window.index_js_url="/vehicle_signal_specification/index.search.js";
-      // variant stuff
-      window.variants && variants.init( [ 'blue' ] );
-      // translations
-      window.T_Copy_to_clipboard = `Copy to clipboard`;
-      window.T_Copied_to_clipboard = `Copied to clipboard!`;
-      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
-      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
-      window.T_Reset_view = `Reset view`;
-      window.T_View_reset = `View reset!`;
-      window.T_No_results_found = `No results found for "{0}"`;
-      window.T_N_results_found = `{1} results found for "{0}"`;
-    </script>
+    <link href="/vehicle_signal_specification/css/auto-complete/auto-complete.min.78b49c23f59ffb08554285843ed4c841484fe34c489058b2991edc027cdd47fc.css" rel="stylesheet">
+    <script src="/vehicle_signal_specification/js/auto-complete/auto-complete.min.9657edd589a1ca6962a3cf03df5aa17f16f2c67350aea0a84dddbd8d5698316f.js" defer></script>
+    <script src="/vehicle_signal_specification/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
+    <script src="/vehicle_signal_specification/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
+    <script type="application/json" id="R-search-config">{
+      "indexFile": "searchindex.en.min.2c66fbc346d17b27bb777ae33c68b1b55764df1717d3bcc3e0938ce5e2e0e085.js"
+    }</script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.multi.min.ffaee7f1e07179595fe8a4b7c469761f90999470e1f04dcb0a94dc2c1cb44f9c.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.en.min.94d0a7cb1f111200e2f5be9dc32699cf266aaa29011e414bdcd36a18ea0fd5ee.js" defer></script>
+    <script type="application/json" id="R-search-lunr-config">{
+      "contentLangs": [
+        "en"
+      ]
+    }</script>
+    <link href="/vehicle_signal_specification/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet" media="print" class="R-async-style"><noscript><link href="/vehicle_signal_specification/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/css/theme.min.2719c80e85f34518eb09a5f9b655d5a7428a6a1fb25954e12cd77d3fb0ccf64c.css" rel="stylesheet">
+    <link href="/vehicle_signal_specification/css/format-html.min.5b99c0458b8ced5e6fc70abdd360cce6d06c2d740e2469f5bb9f4e2399f59b48.css" rel="stylesheet" id="R-format-style">
+    <script type="application/json" id="R-theme-config">{
+      "disableInlineCopyToClipboard": true,
+      "enableBlockCodeWrap": true,
+      "path": "/extensions/overlay/index.html",
+      "relBasePath": "../..",
+      "relBaseUri": "../../..",
+      "themevariants": [
+        "blue"
+      ],
+      "translations": {
+        "Browser_unsupported_feature": "This browser doesn't support this feature",
+        "Close_graph": "Close enlarged graph",
+        "Copied_to_clipboard": "Text copied to clipboard!",
+        "Copy_to_clipboard": "Copy text to clipboard",
+        "Deleted_text_end": "End of deleted text",
+        "Deleted_text_start": "Start of deleted text",
+        "Enlarge_graph": "Enlarge graph",
+        "History_cleared": "History cleared",
+        "Inserted_text_end": "End of inserted text",
+        "Inserted_text_start": "Start of inserted text",
+        "Link_copied_to_clipboard": "Link copied to clipboard!",
+        "N_matches_on_page": "{1} matches for \"{0}\" on this page",
+        "N_results_found": "{1} results found for \"{0}\"",
+        "No_results_found": "No results found for \"{0}\"",
+        "Reset_view": "Reset view",
+        "View_reset": "View reset!"
+      }
+    }</script>
+    <script src="/vehicle_signal_specification/js/theme-head.min.8c8c3bb99b655d91386ff7fefb5fceeb088bff4bb82bcde54fbef7dacb3388cc.js"></script>
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/vehicle_signal_specification/extensions/overlay/index.html">
+  <body class="mobile-support html" data-origin="/vehicle_signal_specification/extensions/overlay/index.html">
+    <a id="R-skip-link" href="#R-body-inner">Skip to main content</a>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><a id="logo" href="https://covesa.github.io/vehicle_signal_specification/">
+  <img src="/vehicle_signal_specification/images/vss.png">
+</a>
+
+        <search><form action="/vehicle_signal_specification/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Open search page" aria-label="Open search page"><i class="fas fa-fw fa-search" aria-hidden="true"></i></button>
+            <input data-search-input name="search-by" class="search-by" type="search" aria-label="Search" placeholder="Search..." title="Search (CTRL+ALT+f)">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search" aria-label="Clear search"><i class="fas fa-fw fa-times" aria-hidden="true" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <nav id="R-content-wrapper" class="highlightable" aria-label="Menu" tabindex="-1">
+        <div id="R-scrollbar" aria-hidden="true"><div id="R-scrollbar-thumb"></div></div>
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/vehicle_signal_specification/introduction/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/introduction/index.html">Introduction</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/governance/index.html"><a class="padding" href="/vehicle_signal_specification/governance/index.html">Governance</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/rule_set/index.html">VSS Rule Set</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/policies/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/policies/index.html">VSS Design Policy</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/catalog/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/catalog/index.html">VSS Standard Catalog</a><ul class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/vehicle_signal_specification/extensions/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/extensions/index.html">Extending and Customizing VSS</a><ul class="collapsible-menu">
+            <li class="active " data-nav-id="/vehicle_signal_specification/extensions/overlay/index.html"><a class="padding" href="/vehicle_signal_specification/extensions/overlay/index.html" aria-current="page">VSS Overlay Mechanism</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html"><a class="padding" href="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html">Cybersecurity Profile</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/extensions/network_serialization_profile/index.html"><a class="padding" href="/vehicle_signal_specification/extensions/network_serialization_profile/index.html">Network Serialization Profile</a></li></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/license/index.html"><a class="padding" href="/vehicle_signal_specification/license/index.html">License</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/ecosystem/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/ecosystem/index.html">Ecosystem</a><ul class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/covesa/vehicle_signal_specification"><a class="padding" href="https://github.com/covesa/vehicle_signal_specification" rel="external"><i class='fab fa-github'></i> Github repo</a></li>
+            <li class="" data-nav-id="https://github.com/covesa/vehicle_signal_specification/releases"><a class="padding" href="https://github.com/covesa/vehicle_signal_specification/releases" rel="external"><i class='fas fa-download'></i> Releases</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><center>
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download covesa/vehicle_signal_specification on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification" data-icon="octicon-star" data-show-count="true" aria-label="Star covesa/vehicle_signal_specification on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    Latest Released Version: 6.1
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</div>
+      </nav>
+    </aside>
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
-      <nav id="R-topbar">
-        <div class="topbar-wrapper">
-          <div class="topbar-sidebar-divider"></div>
+      <header id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-nav" type="button" title="Menu (CTRL&#43;ALT&#43;n)" aria-label="Menu (CTRL&#43;ALT&#43;n)" aria-expanded="false"><i class="fa-fw fas fa-bars" aria-hidden="true"></i></button></span>
             </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)" aria-label="Table of Contents (CTRL&#43;ALT&#43;t)" aria-expanded="false"><i class="fa-fw fas fa-table-list" aria-hidden="true"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+                <div class="topbar-content-wrapper" tabindex="-1">
+<nav class="TableOfContents" aria-label="Table of Contents">
   <ul>
     <li>
       <ul>
@@ -87,22 +192,26 @@ Adding new nodes: By adding nodes the standard catalog can be extended with prop
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/index.html"><span itemprop="name">Vehicle Signal Specification</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/extensions/index.html"><span itemprop="name">Extending and Customizing VSS</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">VSS Overlay Mechanism</span><meta itemprop="position" content="3"></li>
-          </ol>
+          <div class="topbar-area topbar-area-middle" data-area="middle">
+            <nav class="topbar-breadcrumbs breadcrumbs highlightable" aria-label="Breadcrumbs" data-overflow-title="Vehicle Signal Specification &gt; Extending and Customizing VSS &gt; VSS Overlay Mechanism">
+              <ol itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/vehicle_signal_specification/index.html"><span itemprop="name">Vehicle Signal Specification</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/vehicle_signal_specification/extensions/index.html"><span itemprop="name">Extending and Customizing VSS</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="" aria-current="page"><span itemprop="name">VSS Overlay Mechanism</span><meta itemprop="position" content="3"></li>
+              </ol>
+            </nav>
+          </div>
           <div class="topbar-area topbar-area-end" data-area="end">
-				
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/covesa/vehicle_signal_specification/edit/master/docs-gen/content/extensions/overlay.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Edit (CTRL+ALT+w)" href="https://github.com/covesa/vehicle_signal_specification/edit/master/docs-gen/content/extensions/overlay.md" rel="external" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/extensions/index.html" title="Extending and Customizing VSS (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Extending and Customizing VSS (🡐)" href="/vehicle_signal_specification/extensions/index.html" title="Extending and Customizing VSS (🡐)"><i class="fa-fw fas fa-chevron-left" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html" title="Cybersecurity Profile (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Cybersecurity Profile (🡒)" href="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html" title="Cybersecurity Profile (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="More" aria-label="More" aria-expanded="false"><i class="fa-fw fas fa-ellipsis-v" aria-hidden="true"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper">
+                <div class="topbar-content-wrapper" tabindex="-1">
                   <div class="topbar-area topbar-area-more" data-area="more">
                   </div>
                 </div>
@@ -110,13 +219,13 @@ Adding new nodes: By adding nodes the standard catalog can be extended with prop
             </div>
           </div>
         </div>
-      </nav>
+      </header>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+      <main id="R-body-inner" class="highlightable extensions" tabindex="-1">
         <div class="flex-block-wrapper">
-          <article class="default">
-            <header class="headline">
-            </header>
+<article class="default">
+  <header class="headline">
+  </header>
 
 <h1 id="vss-overlay-mechanism">VSS Overlay Mechanism</h1>
 
@@ -134,7 +243,7 @@ Extending the model with richer information is a fundamental feature enabled by 
 <li><strong>Multiple layer files:</strong> VSS layers can be split into several files in order to clearly separate concerns. Layering allows all the features above to be applied in a composable manner. In order to keep a determinstic result a clear order has to remain.</li>
 <li><strong>Wildcard keys:</strong> A single overlay entry can be applied to multiple nodes at once using glob-style <code>*</code> wildcards.</li>
 </ol>
-<h3 id="how-does-it-work">How does it work?</h3>
+<h3 id="how-does-it-work">How does it work?<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <p>Simply said, the tooling accepts, <em>n</em> additional spec files, next to the original
 specification file, which can overwrite or extend data in the VSS tree defined by
 the original specification. Before you start you should know:</p>
@@ -152,10 +261,10 @@ command matters! An example is shown in the figure below.</li>
 </ul>
 <p>The Figure below illustrates an example of the main specification and two
 separate overlay files, an example call of the tooling and the resulting tree.</p>
-<p><a href="#R-image-2aa1244b9a9c04df2b5a67ca5429f39a" class="lightbox-link"><img alt="Include directive" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/vehicle_signal_specification/images/overlay.drawio.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2aa1244b9a9c04df2b5a67ca5429f39a"><img alt="Include directive" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/vehicle_signal_specification/images/overlay.drawio.png"></a><br>
+<p><a href="#R-image-0038d6169a9f6395e33fbda6edffdea4" class="lightbox-link" id="R-image-0038d6169a9f6395e33fbda6edffdea4-link"><img alt="Include directive" class="lazy lightbox rounded figure-image" loading="lazy" src="/vehicle_signal_specification/images/overlay.drawio.png"></a>
+<span class="lightbox-back" id="R-image-0038d6169a9f6395e33fbda6edffdea4" role="dialog" aria-modal="true" aria-label="Include directive" tabindex="-1"><a href="#R-image-0038d6169a9f6395e33fbda6edffdea4-link" class="lightbox-close" aria-label="Close enlarged image"><img alt="Include directive" class="lazy lightbox rounded lightbox-image" loading="lazy" src="/vehicle_signal_specification/images/overlay.drawio.png"></a></span><br>
 <em>Figure: Overview on how overlays work within VSS</em></p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># In this overlay all parent branches are included.</span>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># In this overlay all parent branches are included.</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># If you do not want to change existing branches, it is not necessary to specify them.</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Also note that some elements are missing required attributes (description)</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># but since those elements will be merged with the ones in VSS, the result is valid.</span>
@@ -180,8 +289,9 @@ separate overlay files, an example call of the tooling and the resulting tree.</
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Cabin.Door.IsOpen</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">sensor</span> <span style="color:#75715e">#&lt; change of node type</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">boolean</span></span></span></code></pre></div><p><em>File: overlay_1.vspec</em></p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># This overlay would not be valid on its own since `NewBranch` is missing.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">boolean</span></span></span></code></pre></div>
+<p><em>File: overlay_1.vspec</em></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># This overlay would not be valid on its own since `NewBranch` is missing.</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># When being applied in conjunction with the previous overlay, it would create</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># `HasNewAttribute` accordingly.</span>
 </span></span><span style="display:flex;"><span>
@@ -193,38 +303,42 @@ separate overlay files, an example call of the tooling and the resulting tree.</
 </span></span><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Cabin.Door.IsOpen</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">sensor</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">newKey</span>: <span style="color:#ae81ff">value </span> <span style="color:#75715e">#&lt; Add a new key to the node and add a value</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">boolean</span></span></span></code></pre></div><p><em>File: overlay_2.vspec</em></p>
-<h3 id="node-content-in-overlays">Node content in Overlays</h3>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">boolean</span></span></span></code></pre></div>
+<p><em>File: overlay_2.vspec</em></p>
+<h3 id="node-content-in-overlays">Node content in Overlays<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <p>If you are adding a node you need to specify all attributes required for that node type.
 If you are changing an existing node you typically only need to specify the name and what you would like to overwrite,
 like in the <code>Vehicle.Speed</code> example below. That also works for overwriting nodes that are created using <code>instances</code>.
 <code>vss-tools</code> will then look up the node name and merges the attributes.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Type and Datatype not needed</span>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Type and Datatype not needed</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Speed</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">m/s</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Overwriting the unit of a node created by instances also works</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Occupant.Row1.DriverSide.HeadPosition.Yaw</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">mm</span></span></span></code></pre></div><h3 id="wildcard-keys">Wildcard keys</h3>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">mm</span></span></span></code></pre></div>
+<h3 id="wildcard-keys">Wildcard keys<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <p>An overlay key containing <code>*</code> is treated as a glob pattern and expanded against the accumulated spec before merging.
 Each <code>*</code> matches any substring, including dots, so a single entry can span multiple path segments.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Add a comment to every door lock signal across all rows and sides.</span>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Add a comment to every door lock signal across all rows and sides.</span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Vehicle.Cabin.Door.*.*.IsLocked&#34;</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">Managed by central locking policy.</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Override the unit for all speed signals directly under Vehicle.ADAS.</span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Vehicle.ADAS.*.Speed&#34;</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">m/s</span></span></span></code></pre></div><p>The attributes in the wildcard entry are applied independently to each matching node — equivalent to writing one entry per match.
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">unit</span>: <span style="color:#ae81ff">m/s</span></span></span></code></pre></div>
+<p>The attributes in the wildcard entry are applied independently to each matching node — equivalent to writing one entry per match.
 The expansion order follows the order nodes appear in the base spec, so results are deterministic.</p>
 <p>If a glob matches no nodes, a warning is logged and processing continues successfully, allowing forward-compatible overlays that reference signals not yet present in the base spec.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Logs a warning if no nodes match, but does not fail.</span>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Logs a warning if no nodes match, but does not fail.</span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Vehicle.NewFeature.*.Status&#34;</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">Placeholder for future signals.</span></span></span></code></pre></div><p>Glob keys can be combined with <code>delete:</code> in the usual way.</p>
-<h3 id="deleting-nodes">Deleting nodes</h3>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">comment</span>: <span style="color:#ae81ff">Placeholder for future signals.</span></span></span></code></pre></div>
+<p>Glob keys can be combined with <code>delete:</code> in the usual way.</p>
+<h3 id="deleting-nodes">Deleting nodes<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <p>It is possible to delete nodes using the <code>delete</code> attribute.
 You can delete indidvidual signals, branches, instances or a particular signal in a particular instance.
 A few examples are shown below.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-YAML" data-lang="YAML"><span style="display:flex;"><span><span style="color:#75715e"># Removing IsChildLockActive for DriverSide on Second Row</span>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-YAML" data-lang="YAML"><span style="display:flex;"><span><span style="color:#75715e"># Removing IsChildLockActive for DriverSide on Second Row</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Cabin.Door.Row2.DriverSide.IsChildLockActive</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">datatype</span>: <span style="color:#ae81ff">boolean</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">sensor</span>
@@ -236,156 +350,20 @@ A few examples are shown below.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Removing Vehicle.Speed</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">Vehicle.Speed</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">delete</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>When using the <code>delete</code> argument vss-tools will print a summary on how many nodes that are removed.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Nodes deleted, given<span style="color:#f92672">=</span>6, overall<span style="color:#f92672">=</span><span style="color:#ae81ff">18</span></span></span></code></pre></div><p>The number for <code>given</code> represents number of nodes (branches/sensors/actuators/attributes) explicitly removed.
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">delete</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div>
+<p>When using the <code>delete</code> argument vss-tools will print a summary on how many nodes that are removed.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Nodes deleted, given<span style="color:#f92672">=</span>6, overall<span style="color:#f92672">=</span><span style="color:#ae81ff">18</span></span></span></code></pre></div>
+<p>The number for <code>given</code> represents number of nodes (branches/sensors/actuators/attributes) explicitly removed.
 The <code>overall</code> number represents total number, including child nodes for explicitly removed branches.
 More detailed output is given in debug mode.</p>
 
-            <footer class="footline">
-            </footer>
-          </article>
+  <footer class="footline">
+  </footer>
+</article>
         </div>
       </main>
     </div>
-    <aside id="R-sidebar" class="default-animation">
-      <div id="R-header-topbar" class="default-animation"></div>
-      <div id="R-header-wrapper" class="default-animation">
-        <div id="R-header" class="default-animation">
-<a id="logo" href="https://covesa.github.io/vehicle_signal_specification/">
-  <img src="/vehicle_signal_specification/images/vss.png">
-</a>
-
-        </div>
-
-        <search><form action="/vehicle_signal_specification/search.html" method="get">
-          <div class="searchbox default-animation">
-            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
-            <label class="a11y-only" for="R-search-by">Search</label>
-            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
-            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
-          </div>
-        </form></search>
-        <script>
-          var contentLangs=['en'];
-        </script>
-        <script src="/vehicle_signal_specification/js/auto-complete.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.stemmer.support.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.multi.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.en.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/search.js?1792096953" defer></script>
-      </div>
-      <div id="R-homelinks" class="default-animation">
-        <hr class="padding">
-      </div>
-      <div id="R-content-wrapper" class="highlightable">
-        <div id="R-topics">
-          <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/introduction/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/index.html">Introduction</a><ul id="R-subsections-f5db5b284a3d023503978d00824e9c16" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/introduction/overview/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/overview/index.html">Overview</a></li>
-          <li data-nav-id="/vehicle_signal_specification/introduction/taxonomy/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/taxonomy/index.html">Taxonomies</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/governance/index.html" class=""><a class="padding" href="/vehicle_signal_specification/governance/index.html">Governance</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/index.html">VSS Rule Set</a><ul id="R-subsections-816430a737ffa7bef5da453d8c2d55d4" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/rule_set/basics/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/basics/index.html">Basic Rules</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/branches/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/branches/index.html">Branch Entry</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/index.html" class="alwaysopen"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/index.html">Data Entry</a><ul id="R-subsections-ba77ba218fcc0133bc138c588fbb6eb9" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_types/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_types/index.html">Datatypes</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html">Struct Types</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html">Data Units</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html">Sensors, Actuators and Attributes</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/default/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/default/index.html">Default Values</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/enum/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/enum/index.html">Enums</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html">Value Restrictions</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/instances/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/instances/index.html">Instances</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/includes/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/includes/index.html">Includes</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/policies/index.html" class=""><a class="padding" href="/vehicle_signal_specification/policies/index.html">VSS Design Policy</a><ul id="R-subsections-305615410f40802ad71dde0994916cc5" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/policies/unit_datatype/index.html" class=""><a class="padding" href="/vehicle_signal_specification/policies/unit_datatype/index.html">Unit and Datatype Policy</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/catalog/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/index.html">VSS Standard Catalog</a><ul id="R-subsections-665f6cae1c56b0dcfe0d69bfe3f4be93" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/catalog/energy_management/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/energy_management/index.html">Energy Management</a></li>
-          <li data-nav-id="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html">Vehicle Motion Management</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/index.html" class="parent "><a class="padding" href="/vehicle_signal_specification/extensions/index.html">Extending and Customizing VSS</a><ul id="R-subsections-6bd9c98d69baa9a2d1581189a2aaf28a" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/extensions/overlay/index.html" class="active"><a class="padding" href="/vehicle_signal_specification/extensions/overlay/index.html">VSS Overlay Mechanism</a></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html">Cybersecurity Profile</a></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/network_serialization_profile/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/network_serialization_profile/index.html">Network Serialization Profile</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/license/index.html" class=""><a class="padding" href="/vehicle_signal_specification/license/index.html">License</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/index.html">Ecosystem</a><ul id="R-subsections-30d29cf6aaa7fb1e0e056430337d3cd8" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/tools/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/tools/index.html">Official VSS-Tools</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/standards/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/standards/index.html">Related Standards</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/software/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/software/index.html">Software &amp; Solutions</a></li></ul></li>
-          </ul>
-        </div>
-        <div id="R-shortcuts">
-          <div class="nav-title padding">More</div>
-          <ul class="space">
-            <li><a class="padding" href="https://github.com/covesa/vehicle_signal_specification"><i class='fab fa-github'></i> Github repo</a></li>
-            <li><a class="padding" href="https://github.com/covesa/vehicle_signal_specification/releases"><i class='fas fa-download'></i> Releases</a></li>
-          </ul>
-        </div>
-        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
-        <div id="R-menu-footer">
-          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
-          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
-            <ul>
-              <li id="R-select-language-container" class="footerLangSwitch">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-language"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <label class="a11y-only" for="R-select-language">Language</label>
-                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/vehicle_signal_specification/extensions/overlay/index.html" lang="en-us" selected></option>
-                    </select>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-              </li>
-              <li id="R-select-variant-container" class="footerVariantSwitch">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-paint-brush"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <label class="a11y-only" for="R-select-variant">Theme</label>
-                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                      <option id="R-select-variant-blue" value="blue" selected>Blue</option>
-                    </select>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-                <script>window.variants && variants.markSelectedVariant();</script>
-              </li>
-              <li class="footerVisitedLinks">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-history"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <button onclick="clearHistory();">Clear History</button>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div id="R-footer" class="footerFooter showFooter"><center>
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download covesa/vehicle_signal_specification on GitHub">Download</a>
-
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification" data-icon="octicon-star" data-show-count="true" aria-label="Star covesa/vehicle_signal_specification on GitHub">Star</a>
-
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
-
-    Latest Released Version: 6.1
-</center>
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-          </div>
-        </div>
-      </div>
-    </aside>
-    <script src="/vehicle_signal_specification/js/clipboard.min.js?1792096953" defer></script>
-    <script src="/vehicle_signal_specification/js/perfect-scrollbar.min.js?1792096953" defer></script>
-    <script src="/vehicle_signal_specification/js/theme.js?1792096953" defer></script>
+    <script src="/vehicle_signal_specification/js/theme.min.f66b851115ea46f239f782bd19e65c09786103c8cb054f72664b912bc561d1c8.js" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

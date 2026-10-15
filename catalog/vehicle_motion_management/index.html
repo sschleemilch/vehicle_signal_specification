@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.129.0">
-    <meta name="generator" content="Relearn 6.0.0">
+    <meta name="generator" content="Hugo 0.166.0">
+    <meta name="generator" content="Relearn 9.2.1">
     <meta name="description" content="Introduction In modern vehicles multiple electronic controlled systems are interacting to realize the overall vehicle motion in all physical directions. Typically, the driver gives input e.g. using the steering wheel and the accelerator and brake pedals, but additional vehicle functions may have also requests towards the motion actuators. One example is that a traction control system may want to limit the performance due to slippery road conditions or that the emergency braking system requests braking.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="Vehicle Signal Specification">
     <meta property="og:title" content="Vehicle Motion Management :: Vehicle Signal Specification">
     <meta property="og:description" content="Introduction In modern vehicles multiple electronic controlled systems are interacting to realize the overall vehicle motion in all physical directions. Typically, the driver gives input e.g. using the steering wheel and the accelerator and brake pedals, but additional vehicle functions may have also requests towards the motion actuators. One example is that a traction control system may want to limit the performance due to slippery road conditions or that the emergency braking system requests braking.">
-    <meta property="og:locale" content="en-us">
+    <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="VSS Standard Catalog">
     <meta property="article:published_time" content="2019-08-04T12:46:30+02:00">
@@ -26,48 +26,152 @@
     <meta itemprop="wordCount" content="1473">
     <title>Vehicle Motion Management :: Vehicle Signal Specification</title><link rel="shortcut icon" href="/vehicle_signal_specification/images/fav.png" type="image/x-icon" />
 
-    <link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fontawesome-all.min.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/nucleus.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/auto-complete.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/auto-complete.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/perfect-scrollbar.min.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/fonts.css?1792096953" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/vehicle_signal_specification/css/fonts.css?1792096953" rel="stylesheet"></noscript>
-    <link href="/vehicle_signal_specification/css/theme.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/theme-blue.css?1792096953" rel="stylesheet" id="R-variant-style">
-    <link href="/vehicle_signal_specification/css/chroma-learn.css?1792096953" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/vehicle_signal_specification/css/variant.css?1792096953" rel="stylesheet">
-    <link href="/vehicle_signal_specification/css/print.css?1792096953" rel="stylesheet" media="print">
-    <script src="/vehicle_signal_specification/js/variant.js?1792096953"></script>
-    <script>
-      window.relearn = window.relearn || {};
-      window.relearn.relBasePath='..\/..';
-      window.relearn.relBaseUri='..\/..\/..';
-      window.relearn.absBaseUri='https:\/\/covesa.github.io\/vehicle_signal_specification';
-      window.index_js_url="/vehicle_signal_specification/index.search.js";
-      // variant stuff
-      window.variants && variants.init( [ 'blue' ] );
-      // translations
-      window.T_Copy_to_clipboard = `Copy to clipboard`;
-      window.T_Copied_to_clipboard = `Copied to clipboard!`;
-      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
-      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
-      window.T_Reset_view = `Reset view`;
-      window.T_View_reset = `View reset!`;
-      window.T_No_results_found = `No results found for "{0}"`;
-      window.T_N_results_found = `{1} results found for "{0}"`;
-    </script>
+    <link href="/vehicle_signal_specification/css/auto-complete/auto-complete.min.78b49c23f59ffb08554285843ed4c841484fe34c489058b2991edc027cdd47fc.css" rel="stylesheet">
+    <script src="/vehicle_signal_specification/js/auto-complete/auto-complete.min.9657edd589a1ca6962a3cf03df5aa17f16f2c67350aea0a84dddbd8d5698316f.js" defer></script>
+    <script src="/vehicle_signal_specification/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
+    <script src="/vehicle_signal_specification/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
+    <script type="application/json" id="R-search-config">{
+      "indexFile": "searchindex.en.min.2c66fbc346d17b27bb777ae33c68b1b55764df1717d3bcc3e0938ce5e2e0e085.js"
+    }</script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.multi.min.ffaee7f1e07179595fe8a4b7c469761f90999470e1f04dcb0a94dc2c1cb44f9c.js" defer></script>
+    <script src="/vehicle_signal_specification/js/lunr/lunr.en.min.94d0a7cb1f111200e2f5be9dc32699cf266aaa29011e414bdcd36a18ea0fd5ee.js" defer></script>
+    <script type="application/json" id="R-search-lunr-config">{
+      "contentLangs": [
+        "en"
+      ]
+    }</script>
+    <link href="/vehicle_signal_specification/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet" media="print" class="R-async-style"><noscript><link href="/vehicle_signal_specification/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet"></noscript>
+    <link href="/vehicle_signal_specification/css/theme.min.2719c80e85f34518eb09a5f9b655d5a7428a6a1fb25954e12cd77d3fb0ccf64c.css" rel="stylesheet">
+    <link href="/vehicle_signal_specification/css/format-html.min.5b99c0458b8ced5e6fc70abdd360cce6d06c2d740e2469f5bb9f4e2399f59b48.css" rel="stylesheet" id="R-format-style">
+    <script type="application/json" id="R-theme-config">{
+      "disableInlineCopyToClipboard": true,
+      "enableBlockCodeWrap": true,
+      "path": "/catalog/vehicle_motion_management/index.html",
+      "relBasePath": "../..",
+      "relBaseUri": "../../..",
+      "themevariants": [
+        "blue"
+      ],
+      "translations": {
+        "Browser_unsupported_feature": "This browser doesn't support this feature",
+        "Close_graph": "Close enlarged graph",
+        "Copied_to_clipboard": "Text copied to clipboard!",
+        "Copy_to_clipboard": "Copy text to clipboard",
+        "Deleted_text_end": "End of deleted text",
+        "Deleted_text_start": "Start of deleted text",
+        "Enlarge_graph": "Enlarge graph",
+        "History_cleared": "History cleared",
+        "Inserted_text_end": "End of inserted text",
+        "Inserted_text_start": "Start of inserted text",
+        "Link_copied_to_clipboard": "Link copied to clipboard!",
+        "N_matches_on_page": "{1} matches for \"{0}\" on this page",
+        "N_results_found": "{1} results found for \"{0}\"",
+        "No_results_found": "No results found for \"{0}\"",
+        "Reset_view": "Reset view",
+        "View_reset": "View reset!"
+      }
+    }</script>
+    <script src="/vehicle_signal_specification/js/theme-head.min.8c8c3bb99b655d91386ff7fefb5fceeb088bff4bb82bcde54fbef7dacb3388cc.js"></script>
   </head>
-  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html">
+  <body class="mobile-support html" data-origin="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html">
+    <a id="R-skip-link" href="#R-body-inner">Skip to main content</a>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation"><a id="logo" href="https://covesa.github.io/vehicle_signal_specification/">
+  <img src="/vehicle_signal_specification/images/vss.png">
+</a>
+
+        <search><form action="/vehicle_signal_specification/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Open search page" aria-label="Open search page"><i class="fas fa-fw fa-search" aria-hidden="true"></i></button>
+            <input data-search-input name="search-by" class="search-by" type="search" aria-label="Search" placeholder="Search..." title="Search (CTRL+ALT+f)">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search" aria-label="Clear search"><i class="fas fa-fw fa-times" aria-hidden="true" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <nav id="R-content-wrapper" class="highlightable" aria-label="Menu" tabindex="-1">
+        <div id="R-scrollbar" aria-hidden="true"><div id="R-scrollbar-thumb"></div></div>
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/vehicle_signal_specification/introduction/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/introduction/index.html">Introduction</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/governance/index.html"><a class="padding" href="/vehicle_signal_specification/governance/index.html">Governance</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/rule_set/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/rule_set/index.html">VSS Rule Set</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/policies/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/policies/index.html">VSS Design Policy</a><ul class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/vehicle_signal_specification/catalog/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/catalog/index.html">VSS Standard Catalog</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/vehicle_signal_specification/catalog/energy_management/index.html"><a class="padding" href="/vehicle_signal_specification/catalog/energy_management/index.html">Energy Management</a></li>
+            <li class="active " data-nav-id="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html"><a class="padding" href="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html" aria-current="page">Vehicle Motion Management</a></li></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/extensions/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/extensions/index.html">Extending and Customizing VSS</a><ul class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/license/index.html"><a class="padding" href="/vehicle_signal_specification/license/index.html">License</a></li>
+            <li class="" data-nav-id="/vehicle_signal_specification/ecosystem/index.html"><a class="padding default-animation" href="/vehicle_signal_specification/ecosystem/index.html">Ecosystem</a><ul class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/covesa/vehicle_signal_specification"><a class="padding" href="https://github.com/covesa/vehicle_signal_specification" rel="external"><i class='fab fa-github'></i> Github repo</a></li>
+            <li class="" data-nav-id="https://github.com/covesa/vehicle_signal_specification/releases"><a class="padding" href="https://github.com/covesa/vehicle_signal_specification/releases" rel="external"><i class='fas fa-download'></i> Releases</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><center>
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download covesa/vehicle_signal_specification on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification" data-icon="octicon-star" data-show-count="true" aria-label="Star covesa/vehicle_signal_specification on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    Latest Released Version: 6.1
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</div>
+      </nav>
+    </aside>
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
-      <nav id="R-topbar">
-        <div class="topbar-wrapper">
-          <div class="topbar-sidebar-divider"></div>
+      <header id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
           <div class="topbar-area topbar-area-start" data-area="start">
-            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-nav" type="button" title="Menu (CTRL&#43;ALT&#43;n)" aria-label="Menu (CTRL&#43;ALT&#43;n)" aria-expanded="false"><i class="fa-fw fas fa-bars" aria-hidden="true"></i></button></span>
             </div>
-            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)" aria-label="Table of Contents (CTRL&#43;ALT&#43;t)" aria-expanded="false"><i class="fa-fw fas fa-table-list" aria-hidden="true"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+                <div class="topbar-content-wrapper" tabindex="-1">
+<nav class="TableOfContents" aria-label="Table of Contents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#definitions-and-assumptions">Definitions and Assumptions</a></li>
@@ -91,22 +195,26 @@
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/index.html"><span itemprop="name">Vehicle Signal Specification</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/vehicle_signal_specification/catalog/index.html"><span itemprop="name">VSS Standard Catalog</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Vehicle Motion Management</span><meta itemprop="position" content="3"></li>
-          </ol>
+          <div class="topbar-area topbar-area-middle" data-area="middle">
+            <nav class="topbar-breadcrumbs breadcrumbs highlightable" aria-label="Breadcrumbs" data-overflow-title="Vehicle Signal Specification &gt; VSS Standard Catalog &gt; Vehicle Motion Management">
+              <ol itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/vehicle_signal_specification/index.html"><span itemprop="name">Vehicle Signal Specification</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/vehicle_signal_specification/catalog/index.html"><span itemprop="name">VSS Standard Catalog</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="" aria-current="page"><span itemprop="name">Vehicle Motion Management</span><meta itemprop="position" content="3"></li>
+              </ol>
+            </nav>
+          </div>
           <div class="topbar-area topbar-area-end" data-area="end">
-				
-            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/covesa/vehicle_signal_specification/edit/master/docs-gen/content/catalog/vehicle_motion_management.md" target="_blank" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Edit (CTRL+ALT+w)" href="https://github.com/covesa/vehicle_signal_specification/edit/master/docs-gen/content/catalog/vehicle_motion_management.md" rel="external" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/catalog/energy_management/index.html" title="Energy Management (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Energy Management (🡐)" href="/vehicle_signal_specification/catalog/energy_management/index.html" title="Energy Management (🡐)"><i class="fa-fw fas fa-chevron-left" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/vehicle_signal_specification/extensions/index.html" title="Extending and Customizing VSS (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Extending and Customizing VSS (🡒)" href="/vehicle_signal_specification/extensions/index.html" title="Extending and Customizing VSS (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
             </div>
-            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="More" aria-label="More" aria-expanded="false"><i class="fa-fw fas fa-ellipsis-v" aria-hidden="true"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper">
+                <div class="topbar-content-wrapper" tabindex="-1">
                   <div class="topbar-area topbar-area-more" data-area="more">
                   </div>
                 </div>
@@ -114,17 +222,17 @@
             </div>
           </div>
         </div>
-      </nav>
+      </header>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+      <main id="R-body-inner" class="highlightable catalog" tabindex="-1">
         <div class="flex-block-wrapper">
-          <article class="default">
-            <header class="headline">
-            </header>
+<article class="default">
+  <header class="headline">
+  </header>
 
 <h1 id="vehicle-motion-management">Vehicle Motion Management</h1>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction">Introduction<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>In modern vehicles multiple electronic controlled systems are interacting to realize the overall vehicle motion in all physical directions.
 Typically, the driver gives input e.g. using the steering wheel and the accelerator and brake pedals, but additional vehicle functions may have also requests towards the motion actuators.
 One example is that a traction control system may want to limit the performance due to slippery road conditions or that the emergency braking system requests braking.</p>
@@ -134,7 +242,7 @@ Vehicle motion functions like driver brake request, cooperative regenerative bra
 Therefore, generic interface signals for the braking systems are introduced which support an arbitration of the requested target values by minimum and maximum values.
 The signal definitions for powertrain and steering are based on state-of-the art interfaces which are widely used in the automotive industry.
 VSS does not specify the implementation of the interface signals and the arbitration cascade, but possible examples are given below.</p>
-<h2 id="definitions-and-assumptions">Definitions and Assumptions</h2>
+<h2 id="definitions-and-assumptions">Definitions and Assumptions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>If nothing else is specified, the following definitions and assumptions apply</p>
 <ul>
 <li>
@@ -187,33 +295,33 @@ A positive roll torque indicates a torque that tends to depress the right-hand s
 </li>
 </ul>
 <hr>
-<h2 id="sensors-vs-actuators">Sensors vs. Actuators</h2>
+<h2 id="sensors-vs-actuators">Sensors vs. Actuators<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>The type <code>actuator</code> is selected to define that the signal may be used as a &ldquo;request&rdquo; by vehicle systems/services towards the actuator.
 The type <code>sensor</code> is selected for signals that are processed by the actuator and may be used as actuator feedback towards the requesting vehicle systems/services.</p>
-<h2 id="braking-system">Braking System</h2>
+<h2 id="braking-system">Braking System<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>The defined braking signals are the main signals for interacting between vehicle motion features and the braking system including the arbitration of longitudinal vehicle requests.
 The interface signals are specified on vehicle-, axle- and wheel-level and the arbitration concept supports a flexible integration of vehicle motion features on different ECUs.
 The arbitration of multiple vehicle motion features can result in a sophisticated arbitration logic to ensure the vehicle stability and driver safety, which is not part of VSS signal catalogue.
 However, the specified vehicle signals shall support different arbitration logics.
 The following section shows some hypothetical examples for arbitration.</p>
-<h3 id="example-1---vehicle-force-requests-vehiclemotionmanagementbrakevehicleforcemaximum">Example 1 - vehicle force requests (<code>Vehicle.MotionManagement.Brake.VehicleForceMaximum</code>)</h3>
+<h3 id="example-1---vehicle-force-requests-vehiclemotionmanagementbrakevehicleforcemaximum">Example 1 - vehicle force requests (<code>Vehicle.MotionManagement.Brake.VehicleForceMaximum</code>)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <p>Driver request via brake pedal -2000N.
 Advanced driving assistance system for automated emergency brake has a request of -3000N.
 As a result, a vehicle force of -3000N would be applied, to ensure maximum deceleration.</p>
-<h2 id="example-2-distribution-request-vehiclemotionmanagementbrakevehicleforcedistributionfrontminimum-maximum">Example 2 distribution request (<code>Vehicle.MotionManagement.Brake.VehicleForceDistributionFrontMinimum</code>/ <code>Maximum</code>)</h2>
+<h2 id="example-2-distribution-request-vehiclemotionmanagementbrakevehicleforcedistributionfrontminimum-maximum">Example 2 distribution request (<code>Vehicle.MotionManagement.Brake.VehicleForceDistributionFrontMinimum</code>/ <code>Maximum</code>)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>Vehicle force request of -3000N of example 1.</p>
 <p>A vehicle energy function requests a AxlePercentRangeDistributionFrontMaximum of 100% to be most energy efficient.
 The vehicle stability function could limit this distribution of 20% &lt; x &lt; 80% due to the current driving situation.
 As a result, only 80% axle distribution would be arbitrated, e.g. -600N force (braking) on rear axle and -2400N force (braking) on front axle.</p>
-<h2 id="powertrain-system-electrical-axle">Powertrain System (Electrical Axle)</h2>
+<h2 id="powertrain-system-electrical-axle">Powertrain System (Electrical Axle)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>A vehicle may have an arbitrary number of electrical axles. Rotational speed and torque for an electrical axle refer to the axle coming out of the electrical axle unit.
 There may be a transmission/gearbox between the electrical axle and the actual wheels served by the electrical axle.</p>
 <p>There are two operation modes of an eAxle: torque control or speed control.</p>
-<h3 id="torque-control">Torque Control</h3>
+<h3 id="torque-control">Torque Control<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <p>A torque request (e.g. 50Nm) is realized by the eAxle. In addition, limit for the rotational speed can be defined, e.g. -5000 rpm &hellip; +5000 rpm. These limits are useful to avoid too high wheelspin when the vehicle is on a slippery road. This mode is used most of the time, when the eAxle is active.</p>
-<h3 id="speed-control">Speed Control</h3>
+<h3 id="speed-control">Speed Control<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <p>A rotational speed request (e.g., 1000rpm) is realized by the eAxle. This mode is useful for low speed till standstill, because so the vehicle can be controlled easier to a standstill, especially on a rough road.</p>
-<h2 id="steering-system">Steering System</h2>
+<h2 id="steering-system">Steering System<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>The defined steering signals are the main signals for interacting between vehicle motion features and the steering system on the front axle and are widely used in automotive industry.
 These signals are specified in a generic way to support various steering systems like electric power steering as well as Steer-by-Wire. Therefore, not all signals must necessarily be available/applicable.
 The signal specification supports requests on steering wheel (torque and angle) and the steering rack position which is linked to the steered wheels of the vehicle.
@@ -224,208 +332,71 @@ The different requests are controlled by dedicated &ldquo;mode&rdquo; signals fo
 Based on the stationary driving without external request (config 1) the principle effects of the different steering interface signals are explained for each interface signal exlusively (config 2&hellip;6).
 Depending on the concrete use case a combination of parallel requested interface signals is applicable.</p>
 <table>
-<thead>
-<tr>
-<th>Config</th>
-<th>Current.SteeringWheelTorque (Torque Applied by Driver)</th>
-<th>Current.SteeringWheelAngle</th>
-<th>Current.RackPositionFrontAxle</th>
-<th>Result/Comment</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>1</code>: Regular turn - No external request</td>
-<td>3 Nm</td>
-<td>20 degree</td>
-<td>4 mm</td>
-<td>&ldquo;Steering support&rdquo; (e.g. power steering) require driver to apply 3 Nm to continue turning with same radius.</td>
-</tr>
-<tr>
-<td><code>2</code>. Lane Assist Intervention - <code>SteeringWheelTorqueOffsetTarget = 2 Nm</code></td>
-<td>5 Nm*</td>
-<td>20 degree</td>
-<td>4 mm</td>
-<td>Driver torque needs to be increased to continue turning with same radius</td>
-</tr>
-<tr>
-<td><code>3</code>. Torque Target Changed - <code>SteeringWheelTorqueTarget = 2 Nm</code></td>
-<td>2 Nm*</td>
-<td>20 degree</td>
-<td>4 mm</td>
-<td>Required driver torque set to 2 Nm (e.g. external steering feel for steer by wire), offset ignored.</td>
-</tr>
-<tr>
-<td><code>4</code>. Autonomuos Driving - <code>SteeringWheelAngleTarget = 0 deg</code></td>
-<td>&mdash;**</td>
-<td>0 degree</td>
-<td>4 mm</td>
-<td>Steering wheel set to 0 deg (e.g. automated driving with steer by wire and fixed steering wheel)</td>
-</tr>
-<tr>
-<td><code>5</code>. Stability intervention - <code>RackPositionOffsetFrontAxleTarget = 3 mm</code></td>
-<td>3 Nm</td>
-<td>20 degree</td>
-<td>7 mm</td>
-<td>Rack position increased by 3mm (e.g. vehicle stability intervention with steer by wire)</td>
-</tr>
-<tr>
-<td><code>6</code>. Autonomuous Driving - <code>RackPositionFrontAxleTarget = 3 mm</code></td>
-<td>&mdash;**</td>
-<td>0 degree</td>
-<td>3 mm</td>
-<td>Rack position set to 3 mm (e.g. automated driving), offset ignored</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Config</th>
+      <th>Current.SteeringWheelTorque (Torque Applied by Driver)</th>
+      <th>Current.SteeringWheelAngle</th>
+      <th>Current.RackPositionFrontAxle</th>
+      <th>Result/Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>1</code>: Regular turn - No external request</td>
+      <td>3 Nm</td>
+      <td>20 degree</td>
+      <td>4 mm</td>
+      <td>&ldquo;Steering support&rdquo; (e.g. power steering) require driver to apply 3 Nm to continue turning with same radius.</td>
+    </tr>
+    <tr>
+      <td><code>2</code>. Lane Assist Intervention - <code>SteeringWheelTorqueOffsetTarget = 2 Nm</code></td>
+      <td>5 Nm*</td>
+      <td>20 degree</td>
+      <td>4 mm</td>
+      <td>Driver torque needs to be increased to continue turning with same radius</td>
+    </tr>
+    <tr>
+      <td><code>3</code>. Torque Target Changed - <code>SteeringWheelTorqueTarget = 2 Nm</code></td>
+      <td>2 Nm*</td>
+      <td>20 degree</td>
+      <td>4 mm</td>
+      <td>Required driver torque set to 2 Nm (e.g. external steering feel for steer by wire), offset ignored.</td>
+    </tr>
+    <tr>
+      <td><code>4</code>. Autonomuos Driving - <code>SteeringWheelAngleTarget = 0 deg</code></td>
+      <td>&mdash;**</td>
+      <td>0 degree</td>
+      <td>4 mm</td>
+      <td>Steering wheel set to 0 deg (e.g. automated driving with steer by wire and fixed steering wheel)</td>
+    </tr>
+    <tr>
+      <td><code>5</code>. Stability intervention - <code>RackPositionOffsetFrontAxleTarget = 3 mm</code></td>
+      <td>3 Nm</td>
+      <td>20 degree</td>
+      <td>7 mm</td>
+      <td>Rack position increased by 3mm (e.g. vehicle stability intervention with steer by wire)</td>
+    </tr>
+    <tr>
+      <td><code>6</code>. Autonomuous Driving - <code>RackPositionFrontAxleTarget = 3 mm</code></td>
+      <td>&mdash;**</td>
+      <td>0 degree</td>
+      <td>3 mm</td>
+      <td>Rack position set to 3 mm (e.g. automated driving), offset ignored</td>
+    </tr>
+  </tbody>
 </table>
 <p><code>*</code> Assumption is that driver is holding the steering wheel at the same position as without external request</p>
 <p><code>**</code> Steering wheel torque depending on driver input. Target request may be ignored if driver is applying torque (driver override).</p>
 
-            <footer class="footline">
-            </footer>
-          </article>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar' aria-hidden="true"></i> Aug 4, 2019
+  </footer>
+</article>
         </div>
       </main>
     </div>
-    <aside id="R-sidebar" class="default-animation">
-      <div id="R-header-topbar" class="default-animation"></div>
-      <div id="R-header-wrapper" class="default-animation">
-        <div id="R-header" class="default-animation">
-<a id="logo" href="https://covesa.github.io/vehicle_signal_specification/">
-  <img src="/vehicle_signal_specification/images/vss.png">
-</a>
-
-        </div>
-
-        <search><form action="/vehicle_signal_specification/search.html" method="get">
-          <div class="searchbox default-animation">
-            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
-            <label class="a11y-only" for="R-search-by">Search</label>
-            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
-            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
-          </div>
-        </form></search>
-        <script>
-          var contentLangs=['en'];
-        </script>
-        <script src="/vehicle_signal_specification/js/auto-complete.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.stemmer.support.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.multi.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/lunr/lunr.en.min.js?1792096953" defer></script>
-        <script src="/vehicle_signal_specification/js/search.js?1792096953" defer></script>
-      </div>
-      <div id="R-homelinks" class="default-animation">
-        <hr class="padding">
-      </div>
-      <div id="R-content-wrapper" class="highlightable">
-        <div id="R-topics">
-          <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/introduction/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/index.html">Introduction</a><ul id="R-subsections-f5db5b284a3d023503978d00824e9c16" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/introduction/overview/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/overview/index.html">Overview</a></li>
-          <li data-nav-id="/vehicle_signal_specification/introduction/taxonomy/index.html" class=""><a class="padding" href="/vehicle_signal_specification/introduction/taxonomy/index.html">Taxonomies</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/governance/index.html" class=""><a class="padding" href="/vehicle_signal_specification/governance/index.html">Governance</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/index.html">VSS Rule Set</a><ul id="R-subsections-816430a737ffa7bef5da453d8c2d55d4" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/rule_set/basics/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/basics/index.html">Basic Rules</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/branches/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/branches/index.html">Branch Entry</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/index.html" class="alwaysopen"><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/index.html">Data Entry</a><ul id="R-subsections-ba77ba218fcc0133bc138c588fbb6eb9" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_types/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_types/index.html">Datatypes</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_types_struct/index.html">Struct Types</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/data_units/index.html">Data Units</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html">Sensors, Actuators and Attributes</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/default/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/default/index.html">Default Values</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/enum/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/enum/index.html">Enums</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/data_entry/allowed/index.html">Value Restrictions</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/instances/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/instances/index.html">Instances</a></li>
-          <li data-nav-id="/vehicle_signal_specification/rule_set/includes/index.html" class=""><a class="padding" href="/vehicle_signal_specification/rule_set/includes/index.html">Includes</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/policies/index.html" class=""><a class="padding" href="/vehicle_signal_specification/policies/index.html">VSS Design Policy</a><ul id="R-subsections-305615410f40802ad71dde0994916cc5" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/policies/unit_datatype/index.html" class=""><a class="padding" href="/vehicle_signal_specification/policies/unit_datatype/index.html">Unit and Datatype Policy</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/catalog/index.html" class="parent "><a class="padding" href="/vehicle_signal_specification/catalog/index.html">VSS Standard Catalog</a><ul id="R-subsections-665f6cae1c56b0dcfe0d69bfe3f4be93" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/catalog/energy_management/index.html" class=""><a class="padding" href="/vehicle_signal_specification/catalog/energy_management/index.html">Energy Management</a></li>
-          <li data-nav-id="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html" class="active"><a class="padding" href="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html">Vehicle Motion Management</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/index.html">Extending and Customizing VSS</a><ul id="R-subsections-6bd9c98d69baa9a2d1581189a2aaf28a" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/extensions/overlay/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/overlay/index.html">VSS Overlay Mechanism</a></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/cybersecurity_profile/index.html">Cybersecurity Profile</a></li>
-          <li data-nav-id="/vehicle_signal_specification/extensions/network_serialization_profile/index.html" class=""><a class="padding" href="/vehicle_signal_specification/extensions/network_serialization_profile/index.html">Network Serialization Profile</a></li></ul></li>
-          <li data-nav-id="/vehicle_signal_specification/license/index.html" class=""><a class="padding" href="/vehicle_signal_specification/license/index.html">License</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/index.html">Ecosystem</a><ul id="R-subsections-30d29cf6aaa7fb1e0e056430337d3cd8" class="morespace collapsible-menu">
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/tools/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/tools/index.html">Official VSS-Tools</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/standards/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/standards/index.html">Related Standards</a></li>
-          <li data-nav-id="/vehicle_signal_specification/ecosystem/software/index.html" class=""><a class="padding" href="/vehicle_signal_specification/ecosystem/software/index.html">Software &amp; Solutions</a></li></ul></li>
-          </ul>
-        </div>
-        <div id="R-shortcuts">
-          <div class="nav-title padding">More</div>
-          <ul class="space">
-            <li><a class="padding" href="https://github.com/covesa/vehicle_signal_specification"><i class='fab fa-github'></i> Github repo</a></li>
-            <li><a class="padding" href="https://github.com/covesa/vehicle_signal_specification/releases"><i class='fas fa-download'></i> Releases</a></li>
-          </ul>
-        </div>
-        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
-        <div id="R-menu-footer">
-          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
-          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
-            <ul>
-              <li id="R-select-language-container" class="footerLangSwitch">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-language"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <label class="a11y-only" for="R-select-language">Language</label>
-                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
-                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/vehicle_signal_specification/catalog/vehicle_motion_management/index.html" lang="en-us" selected></option>
-                    </select>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-              </li>
-              <li id="R-select-variant-container" class="footerVariantSwitch">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-paint-brush"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <label class="a11y-only" for="R-select-variant">Theme</label>
-                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
-                      <option id="R-select-variant-blue" value="blue" selected>Blue</option>
-                    </select>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-                <script>window.variants && variants.markSelectedVariant();</script>
-              </li>
-              <li class="footerVisitedLinks">
-                <div class="padding menu-control">
-                  <i class="fa-fw fas fa-history"></i>
-                  <span>&nbsp;</span>
-                  <div class="control-style">
-                    <button onclick="clearHistory();">Clear History</button>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div id="R-footer" class="footerFooter showFooter"><center>
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download covesa/vehicle_signal_specification on GitHub">Download</a>
-
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification" data-icon="octicon-star" data-show-count="true" aria-label="Star covesa/vehicle_signal_specification on GitHub">Star</a>
-
-    
-    <a class="github-button" href="https://github.com/covesa/vehicle_signal_specification/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
-
-    Latest Released Version: 6.1
-</center>
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-          </div>
-        </div>
-      </div>
-    </aside>
-    <script src="/vehicle_signal_specification/js/clipboard.min.js?1792096953" defer></script>
-    <script src="/vehicle_signal_specification/js/perfect-scrollbar.min.js?1792096953" defer></script>
-    <script src="/vehicle_signal_specification/js/theme.js?1792096953" defer></script>
+    <script src="/vehicle_signal_specification/js/theme.min.f66b851115ea46f239f782bd19e65c09786103c8cb054f72664b912bc561d1c8.js" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

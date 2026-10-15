@@ -27,21 +27,21 @@
       <link>https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/data_units/index.html</link>
       <pubDate>Sun, 04 Aug 2019 12:36:12 +0200</pubDate>
       <guid>https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/data_units/index.html</guid>
-      <description>Introduction to Data Units in VSS It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units. For most signals in the VSS standard catalog, a data unit has been selected. A typical example is Vehicle.Speed, as shown below.&#xA;Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed.The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry.</description>
+      <description>Introduction to Data Units in VSS It is in VSS possible for signals to specify a unit of measurement from a list of predefined data units. For most signals in the VSS standard catalog, a data unit has been selected. A typical example is Vehicle.Speed, as shown below.&#xA;Vehicle.Speed: datatype: float type: sensor unit: km/h description: Vehicle speed. The ambition when selecting data unit for signals in VSS standard catalog has been to use either a unit based on SI-units, or a unit commonly used within the vehicle industry. For the Vehicle.Speed example above this means that km/h has been selected, even if m/s from an SI-perspective would have been a better choice.</description>
     </item>
     <item>
       <title>Sensors, Actuators and Attributes</title>
       <link>https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html</link>
       <pubDate>Sun, 04 Aug 2019 12:37:03 +0200</pubDate>
       <guid>https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/sensor_actuator/index.html</guid>
-      <description>Property Types Overview sensor type Sensors are properties that, from a VSS-perspective, are read-only. The values of a sensor property typically change over time and within an ignition cycle (i.e., a driving journey). Reading a sensor shall return the actual value of the related property (e.g., the current speed or the current position of the seat).&#xA;actuator type Similarly, actuators are properties that, from a VSS-perspective, can be read and written.</description>
+      <description>Property Types Overview sensor type Sensors are properties that, from a VSS-perspective, are read-only. The values of a sensor property typically change over time and within an ignition cycle (i.e., a driving journey). Reading a sensor shall return the actual value of the related property (e.g., the current speed or the current position of the seat).</description>
     </item>
     <item>
       <title>Default Values</title>
       <link>https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/default/index.html</link>
       <pubDate>Sun, 04 Aug 2019 12:37:31 +0200</pubDate>
       <guid>https://covesa.github.io/vehicle_signal_specification/rule_set/data_entry/default/index.html</guid>
-      <description>VSS supports default values by the default attribute. The intention is to provide a mechanism to provide initial values for data entries already when loading a VSS catalog. This could typically be useful for attributes that never or rarely change, like vehicle VIN or vehicle color.&#xA;The standard Vehicle Signal Specification does not include default values for all attributes. If a default value has not been specified then the OEM must define a default value matching the actual vehicle, either by using the default concept, or by the same other mechanism.</description>
+      <description>VSS supports default values by the default attribute. The intention is to provide a mechanism to provide initial values for data entries already when loading a VSS catalog. This could typically be useful for attributes that never or rarely change, like vehicle VIN or vehicle color.&#xA;The standard Vehicle Signal Specification does not include default values for all attributes. If a default value has not been specified then the OEM must define a default value matching the actual vehicle, either by using the default concept, or by the same other mechanism. If the standard defines a default value but it does not fit the actual vehicle, then the OEM must override the standard default value.</description>
     </item>
     <item>
       <title>Enums</title>

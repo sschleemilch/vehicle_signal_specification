@@ -3,7 +3,7 @@
   <channel>
     <title>VSS Design Policy :: Vehicle Signal Specification</title>
     <link>https://covesa.github.io/vehicle_signal_specification/policies/index.html</link>
-    <description>In addition to the rules for the VSS langage the VSS project has agreed on policies for the VSS standard catalog. When someone wants to add new signals to the VSS catalog it shall be verified that the contribution follows the policies for the VSS Standard catalog.&#xA;Legacy signals may exist that does not follow the policies. Those signals or the characteristics of those signals shall preferably be listed as exceptions in the corresponding policies.</description>
+    <description>In addition to the rules for the VSS langage the VSS project has agreed on policies for the VSS standard catalog. When someone wants to add new signals to the VSS catalog it shall be verified that the contribution follows the policies for the VSS Standard catalog.&#xA;Legacy signals may exist that does not follow the policies. Those signals or the characteristics of those signals shall preferably be listed as exceptions in the corresponding policies. There it shall also preferably be stated if the signals better shall be refactored in the future or if they by some are excempted from the policy.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Aug 2019 12:46:30 +0200</lastBuildDate>
