@@ -1,25 +1,9 @@
-# justfile to generate specifications
-
-TOOLSDIR := env_var_or_default("TOOLSDIR", "./vss-tools")
 VSS_VERSION := env_var_or_default("VSS_VERSION", "0.0")
 COMMON_ARGS := "-u ./spec/units.yaml --strict"
 COMMON_VSPEC_ARG := "-s ./spec/VehicleSignalSpecification.vspec"
 COMMON_DATATYPES_ARG := "-t ./spec/VehicleDataTypes.vspec"
 
-# Match Make's default target.
-default: all
-
-all: clean mandatory_targets optional_targets
-
-# All mandatory targets that shall be built and pass on each pull request for
-# vehicle-signal-specification or vss-tools.
-mandatory_targets: clean apigear avro binary compose csv datatypes ddsidl go id json json-noexpand jsonschema overlays plantuml samm s2dm yaml
-
-# Additional targets that are built by CI, but are not mandatory to pass.
-# Run with `just --keep-going optional_targets` to continue after errors.
-optional_targets: clean protobuf
-
-# Exporters
+default: clean apigear avro binary compose csv datatypes ddsidl go id json json-noexpand jsonschema plantuml samm s2dm yaml protobuf overlays
 
 datatypes:
     vspec export json {{COMMON_ARGS}} {{COMMON_VSPEC_ARG}} {{COMMON_DATATYPES_ARG}} -o vss_with_datatypes.json
@@ -76,9 +60,6 @@ s2dm:
 yaml:
     vspec export yaml {{COMMON_ARGS}} {{COMMON_VSPEC_ARG}} -o vss.yaml
 
-# Other
-
-# Verifies that supported overlay combinations are syntactically correct.
 overlays:
     vspec export json {{COMMON_ARGS}} -l overlays/profiles/motorbike.vspec {{COMMON_VSPEC_ARG}} -o vss_motorbike.json
     vspec export json {{COMMON_ARGS}} -l overlays/extensions/dual_wiper_systems.vspec {{COMMON_VSPEC_ARG}} -o vss_dualwiper.json
@@ -86,8 +67,9 @@ overlays:
 
 clean:
     rm -f vss.*
-    rm -f vss_with_datatypes.json
+    rm -f vss_with_datatypes.json vss_apigear.tar.gz vss_compose.tar.gz
     rm -rf apigear
     rm -rf compose
     rm -rf samm
     rm -rf graphql
+    rm -rf avro
