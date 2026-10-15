@@ -65,9 +65,12 @@ overlays:
     vspec export json {{COMMON_ARGS}} -l overlays/extensions/dual_wiper_systems.vspec {{COMMON_VSPEC_ARG}} -o vss_dualwiper.json
     vspec export json {{COMMON_ARGS}} -l overlays/extensions/OBD.vspec {{COMMON_VSPEC_ARG}} -o vss_obd.json
 
+docs:
+    hugo -s ./docs-gen
+
 clean:
     rm -f vss.*
-    rm -f vss_with_datatypes.json vss_apigear.tar.gz vss_compose.tar.gz
+    rm -f vss_*
     rm -rf apigear
     rm -rf compose
     rm -rf samm
