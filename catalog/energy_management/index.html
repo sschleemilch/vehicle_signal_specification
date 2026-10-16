@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.166.0">
+    <meta name="generator" content="Hugo 0.167.0">
     <meta name="generator" content="Relearn 9.2.1">
     <meta name="description" content="Introduction The VSS energy management feature conditions the battery for fast charging at the end of the trip. Energy savings are achieved by minimizing the time when the battery is at the required temperature.
 Logic When the feature is enabled (EnergyManagement.IsEnabled) optimized values for the battery temperature setpoint, the coolant mass flow and the heater power are downloaded into the vehicle. The values are the result of a predictive optimization that takes the current battery state and the route into account (Vehicle.Cabin.Infotainment.Navigation). The expected GPS position is also downloaded to detect if the vehicle is still on the route. If a deviation in the battery temperature is detected or if the vehicle has left the expected route a new optimization is triggered (EnergyManagement.IsRecalculationRequest). When the vehicle has reached its destination the backend is notified (Navigation.Map.IsDestinationReached).">
