@@ -10,7 +10,6 @@
 
 pkgs.mkShell {
   packages = with pkgs; [
-    gnumake
     git
     openssl
     go
@@ -28,8 +27,6 @@ pkgs.mkShell {
 
   shellHook = ''
     export PATH="$HOME/.local/bin:$PATH"
-    if ! command -v vspec > /dev/null; then
-        uv tool install git+https://github.com/COVESA/vss-tools@master
-    fi
+    alias install-vss-tools="uv tool install -U git+https://github.com/COVESA/vss-tools@master"
   '';
 }
