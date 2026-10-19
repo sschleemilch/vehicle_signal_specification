@@ -11,7 +11,7 @@
 # ************ MASTER *************''
 # For master (ongoing development) we typically rely on latest master of vss-tools
 #
-pip install --upgrade git+https://github.com/COVESA/vss-tools@master
+uv tool install -U git+https://github.com/COVESA/vss-tools@master
 
 # Examples for other scenarios below
 #
