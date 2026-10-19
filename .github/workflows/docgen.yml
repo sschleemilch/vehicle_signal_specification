@@ -18,6 +18,12 @@ jobs:
 
       - uses: cachix/install-nix-action@v31
 
+      - name: Cache Nix store
+        uses: nix-community/cache-nix-action@v7
+        with:
+          primary-key: nix-${{ runner.os }}-${{ hashFiles('**/*.nix', 'npins/**') }}
+          restore-prefixes-first-match: nix-${{ runner.os }}-
+
       - name: Make docs
         env:
           SKIP_VSS_TOOLS: "1"
